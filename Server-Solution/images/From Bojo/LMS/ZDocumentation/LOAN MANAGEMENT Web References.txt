@@ -1,0 +1,14 @@
+	
+	LoanAmortizer Enterprise
+
+		http://www.loanamortizer.com/_en/products/enterprise/features/
+
+	Loan Management System for Servicing Loans
+	
+		http://www.disc-calif.com/loan-servicing-software.html
+	
+	Conceptual Data Model for a Loan Management System 
+	
+		http://www.databaseanswers.org/data_models/loan_management/index.htm
+	
+		http://www.databaseanswers.org/data_models/student_loans/index.htm

@@ -1,0 +1,24 @@
+﻿body 
+{
+	margin: 0;
+	padding: 0;
+	font: .70em/1.5em  Verdana, Tahoma, Helvetica, sans-serif;
+	color: #666666; 
+	background: #FED36B url(images/header.gif) no-repeat top left;
+
+}
+
+#flashvid
+{
+	border: 1px solid #cc;
+	display:block;
+	padding: 10px;
+}
+
+#flashvid .flash
+{
+	position: absolute; 
+	left: 50%; top: 50%; 
+	margin-top: -200px;
+	margin-left: -350px; /* again see note below */
+}

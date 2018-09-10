@@ -1,0 +1,18 @@
+
+Class Registrar Services
+
+	Transcript Manager -------------- na a nka size
+	Transcript Information   ----------- 998, 58
+
+Class Finance Services
+
+	Cashier Manager
+		
+		Credit Memo Prooflist 		665, 75
+		Issued Discounts		665, 75
+		Fees Register (Detailed)	665, 75
+		Fees Register (Summarized)	665, 75
+		Student Balances Prooflist	665, 75
+	
+	
+	

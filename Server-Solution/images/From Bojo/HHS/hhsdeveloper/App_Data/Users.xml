@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<users>
+  <usersInfo>
+    <id>user001</id>
+    <user_name>Bojo</user_name>
+    <password>pisot</password>
+    <is_active>true</is_active>
+  </usersInfo>
+  <usersInfo>
+    <id>user002</id>
+    <user_name>Judyll</user_name>
+    <password>troso</password>
+    <is_active>true</is_active>
+  </usersInfo>
+  <usersInfo>
+    <id>user003</id>
+    <user_name>admin</user_name>
+    <password>newmediaix</password>
+    <is_active>true</is_active>
+  </usersInfo>
+  <usersInfo>
+    <id>user004</id>
+    <user_name>Francis</user_name>
+    <password>gwapo</password>
+    <is_active>true</is_active>
+  </usersInfo>
+</users>

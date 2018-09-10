@@ -1,0 +1,24 @@
+ 
+ICONS
+
+	Insert Icon
+
+
+Class Physician Referral
+
+	Referral Information Create			891, 73
+	Referral Information View Update		891, 73
+	Referral Assignment Create			777, 73
+	Referral Assingment View Update			777, 73
+	Referral Care Provider Order Create		694, 73
+	Referral Care Provider Order View Update	694, 73
+	Referral Laboratory Order Create		694, 73
+	Referral Laboratory Order View Update		694, 73
+
+Class Patient
+
+	Patient Information Record			781, 73
+
+Control Header
+
+	Care Provider					387, 28

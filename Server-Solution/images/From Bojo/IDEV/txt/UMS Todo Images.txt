@@ -1,0 +1,74 @@
+ADMINISTRATION SERVICES
+	Class Administration Manager
+		User Information Manager		773 - 58
+		System Log				995 - 58
+		Transaction Done			730 - 58
+		User Information Create			730 - 58
+		User Information View Update		730 - 58
+
+FINANCE SERVICES
+	Class Cashiering Manager
+		CASHIERING MANAGER			1024 - 768
+		Multiple Additional Payment Create	614 - 58
+		Student Additional Fee view Update	496 - 58
+		Student Tab				997 - 75
+
+	Class School Fee Manager
+		School Fee Maintenance			627 - 58
+
+	Class Student Manager
+		Student Id Generator			472 - 58
+
+OFFICE SERVICES
+
+	Class Scholarship Manager
+		Scholarship Manager 			1024 - 768
+		Student Search				614 - 58
+		Scholarship Create			626 - 58
+		Scholarship View Update			626 - 58
+		Student Scholarship Create		750 - 58
+		Student Scholarship View Update		750 - 58
+
+	Class Student Loading
+		Print Statement Of Account		612 - 58
+		Enrolment History			627 - 58
+
+REGISTRAR SERVICES
+	Class Major Exam Manager
+		Major Exam Manager			1024 - 768
+		Major Exam Schedule Create		684 - 768	
+		Major Exam Schedule View Update		684 - 768
+
+----------------------------------- Corrections (3/2/09) ----------------------------------------------------
+
+OFFICE SERVICES
+
+	Class Scholarship Manager
+		Student Search				864, 58
+
+
+FINANCE SERVICES
+
+	Class Cashiering Manager
+		Multiple Additional Payment Create	864, 58
+
+	Class Student Manager
+		Student Advance Information Create 		---- changed the header design
+		Student Advance Information View Update		---- changed the header design
+
+
+PAYROLL SERVICES
+
+	Class Employee Manager
+		Employee Create					---- change the header design
+		Employee view update				---- change the header design
+
+
+Additional Icon
+	Multiple Additional Payment create
+
+--------------------------------- END Corrections (3/2/09) -----------------------------------------------------
+
+
+
+	

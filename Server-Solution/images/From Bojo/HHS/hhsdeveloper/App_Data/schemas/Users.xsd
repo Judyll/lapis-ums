@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Users" elementFormDefault="qualified" xmlns="http://tempuri.org/Users.xsd" xmlns:mstns="http://tempuri.org/Users.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="users">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="usersInfo" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:string">
+              </xs:element>
+              <xs:element name="user_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1">
+                    </xs:minLength>
+                    <xs:maxLength value="256">
+                    </xs:maxLength>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="password">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="1">
+                    </xs:minLength>
+                    <xs:maxLength value="256">
+                    </xs:maxLength>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="is_active" type="xs:boolean">
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:key name="usersInfo_PK">
+      <xs:selector xpath=".//usersInfo" />
+      <xs:field xpath="id" />
+    </xs:key>
+  </xs:element>
+</xs:schema>

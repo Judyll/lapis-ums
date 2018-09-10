@@ -15,22 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteServer", "src\RemoteS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteServerLib", "src\RemoteServerLib\RemoteServerLib.csproj", "{5FFD093C-A2CD-4652-8D1D-4E80A2639496}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql-scripts", "sql-scripts", "{72532EA8-05FA-4710-A19A-220C3F2093E0}"
-	ProjectSection(SolutionItems) = preProject
-		sql-scripts\UMS ( 01 ) Server Solution SQL.sql = sql-scripts\UMS ( 01 ) Server Solution SQL.sql
-		sql-scripts\UMS ( 02 ) Registrar Solution SQL.sql = sql-scripts\UMS ( 02 ) Registrar Solution SQL.sql
-		sql-scripts\UMS ( 03 ) Payroll Solutions SQL.sql = sql-scripts\UMS ( 03 ) Payroll Solutions SQL.sql
-		sql-scripts\UMS ( 04 ) Finance Solutions Student SQL.sql = sql-scripts\UMS ( 04 ) Finance Solutions Student SQL.sql
-		sql-scripts\UMS ( 05 ) Finance Solutions SQL.sql = sql-scripts\UMS ( 05 ) Finance Solutions SQL.sql
-		sql-scripts\UMS ( 06 ) Office Solutions SQL.sql = sql-scripts\UMS ( 06 ) Office Solutions SQL.sql
-		sql-scripts\UMS ( 07 ) Attendance Solutions SQL.sql = sql-scripts\UMS ( 07 ) Attendance Solutions SQL.sql
-		sql-scripts\UMS ( 08 ) Person Triggers and Procedures Dependent to Other Tables SQL.sql = sql-scripts\UMS ( 08 ) Person Triggers and Procedures Dependent to Other Tables SQL.sql
-		sql-scripts\UMS Maintenance Queries.sql = sql-scripts\UMS Maintenance Queries.sql
-		sql-scripts\UMS Rebuild Indexes.sql = sql-scripts\UMS Rebuild Indexes.sql
-		sql-scripts\UMS Server Solution Schema, Login, Users SQL (Reformat and Attachment).sql = sql-scripts\UMS Server Solution Schema, Login, Users SQL (Reformat and Attachment).sql
-		sql-scripts\UMS Server Solution Schema, Login, Users SQL.sql = sql-scripts\UMS Server Solution Schema, Login, Users SQL.sql
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

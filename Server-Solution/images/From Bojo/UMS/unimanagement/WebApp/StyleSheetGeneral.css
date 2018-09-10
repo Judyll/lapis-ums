@@ -1,0 +1,31 @@
+﻿body 
+{
+	margin: 0;
+	padding: 0;
+	font: .70em/1.5em  Verdana, Tahoma, Helvetica, sans-serif;
+	color: #666666; 
+	background: #fff url(images/bg.jpg) repeat-x;
+}
+
+#flashvid
+{
+	border: 1px solid #cc;
+	display:block;
+	padding: 10px;
+	position: absolute; 
+	left: 47%; top: 40%; 
+	margin-top: -200px;
+	margin-left: -350px; /* again see note below */
+	background: url(images/flashbg.gif) no-repeat center;
+	width: 730px;
+	height: 472px;
+}
+
+.flash
+{
+	position: absolute; 
+	left: 50%; top: 47%; 
+	margin-top: -200px;
+	margin-left: -350px; /* again see note below */
+
+}

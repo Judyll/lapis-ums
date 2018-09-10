@@ -1,0 +1,33 @@
+
+Class Base Services
+
+	Office / Employer Create		498, 58
+	Office / Employer View update		498, 58
+
+	Person Beneficiaries Create		498, 58
+	Person Beneficiaries View Update	498, 58
+
+	Person Information Create		994, 58
+	Person Information View Update 		994, 58
+
+	Person Reference Create			498, 58
+	Person Reference View Update		498, 58
+
+
+Class Member Services
+
+	For Managers:
+		Member Manager			1022, 728
+
+	Member Information Create		994, 58
+	Member Information View Update		994, 58
+
+
+Side Panels
+	
+	General Information			161, 25
+	Beneficiaries				161, 25
+	References				161, 25
+	Personal Documents			161, 25
+	Member Information			161, 25
+	Services				161, 25

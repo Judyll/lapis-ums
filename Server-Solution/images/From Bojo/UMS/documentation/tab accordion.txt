@@ -1,0 +1,72 @@
+/*--------------jquery tab accordion ----------------*/
+
+#wrapper{
+	width:300px;
+	margin-top:5px;
+	}
+#wrapper p{
+	margin:0;
+	padding:1em;
+	color:#666666;
+	font-size:12px;
+	font-family:Arial;
+	line-height:1.3em;
+	text-align:left;
+	border:1px solid #73A405;
+	}
+a.wrapper:link{
+	color:#fff;
+	text-decoration:none;
+	}
+a.wrapper:visited{
+	color:#fff;
+	text-decoration: none;
+	}
+a.wrapper:active{
+	color:#fff;
+	}
+a.wrapper a:hover{
+	color:#DFE44F;
+	}
+a.details:link{
+	color:#333;
+	text-decoration:none;
+	}
+a.details:active{
+	color:#333;
+	background:url(../images/file.gif) no-repeat left;
+	padding-left:17px;
+	}
+a.details:visited{
+	color:#999;
+	text-decoration: none;
+	background:url(../images/file.gif) no-repeat left;
+	padding-left:17px;
+	}
+a.details:hover{
+	color:#333;
+	text-decoration:none;
+	}
+.box{
+	background:#fff;
+	}
+.boxholder{
+	clear:both;
+	padding:5px;
+	background:#F5B800;
+	}
+.tab{
+	float:left;
+	height:32px;
+	width:102px;
+	margin:0 1px 0 0;
+	text-align:center;
+	background:#8DC70A url(../images/greentab.jpg) no-repeat;
+	}
+.tabtxt{
+	margin: 0;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 9px 0 0 0;
+	}
