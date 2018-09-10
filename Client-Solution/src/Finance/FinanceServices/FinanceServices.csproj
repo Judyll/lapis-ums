@@ -1,0 +1,1279 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DAC60546-A88A-4668-B7ED-FAFCB33AEFCE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinanceServices</RootNamespace>
+    <AssemblyName>fssvc</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="bssvc, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Base Solution\BaseServices\BaseServices\bin\Release\bssvc.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="rclnt, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Server Solutions\Server DLL\rclnt.dll</HintPath>
+    </Reference>
+    <Reference Include="rslib, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Server Solutions\Server DLL\rslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XPPanel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c1a4c9eadd4711d4">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ZTesting\XP Panel DLL\XPPanel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassCashieringManager\BaseClass\CashieringLogic.cs" />
+    <Compile Include="ClassCashieringManager\BaseClass\ConvertNumberWords.cs" />
+    <Compile Include="ClassCashieringManager\BaseForm\BreakDownBankDeposit.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\BreakDownBankDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\BreakDownBankDeposit.Designer.cs">
+      <DependentUpon>BreakDownBankDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashDiscountReportControl.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashDiscountReportControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashDiscountReportControl.Designer.cs">
+      <DependentUpon>CashDiscountReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashieringManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashieringManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashieringManager.Designer.cs">
+      <DependentUpon>CashieringManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashReceiptQueryReportControl.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashReceiptQueryReportControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashReceiptQueryReportControl.Designer.cs">
+      <DependentUpon>CashReceiptQueryReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashReceiptReportControl.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashReceiptReportControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CashReceiptReportControl.Designer.cs">
+      <DependentUpon>CashReceiptReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CreditMemoReportControl.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CreditMemoReportControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\CreditMemoReportControl.Designer.cs">
+      <DependentUpon>CreditMemoReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\DiscountReportControl.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\DiscountReportControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\DiscountReportControl.Designer.cs">
+      <DependentUpon>DiscountReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\FeeRegisterDetailedReportControl.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\FeeRegisterDetailedReportControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\FeeRegisterDetailedReportControl.Designer.cs">
+      <DependentUpon>FeeRegisterDetailedReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\FeeRegisterSummarizedReportControl.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\FeeRegisterSummarizedReportControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\FeeRegisterSummarizedReportControl.Designer.cs">
+      <DependentUpon>FeeRegisterSummarizedReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MajorExamSchedule.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MajorExamSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MajorExamSchedule.Designer.cs">
+      <DependentUpon>MajorExamSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MiscellaneousIncome.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MiscellaneousIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MiscellaneousIncome.Designer.cs">
+      <DependentUpon>MiscellaneousIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MultipleAdditionalFeeCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MultipleAdditionalFeeCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\MultipleAdditionalFeeCreate.Designer.cs">
+      <DependentUpon>MultipleAdditionalFeeCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\ReceiptNumberInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\ReceiptNumberInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\ReceiptNumberInformation.Designer.cs">
+      <DependentUpon>ReceiptNumberInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\SearchOnTextboxListChartOfAccount.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\SearchOnTextboxListChartOfAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\SearchOnTextboxListChartOfAccount.Designer.cs">
+      <DependentUpon>SearchOnTextboxListChartOfAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentAccountReceivableFiscalYear.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentAccountReceivableFiscalYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentAccountReceivableFiscalYear.Designer.cs">
+      <DependentUpon>StudentAccountReceivableFiscalYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentAdditionalFee.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentAdditionalFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentAdditionalFee.Designer.cs">
+      <DependentUpon>StudentAdditionalFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentBalanceReport.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentBalanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentBalanceReport.Designer.cs">
+      <DependentUpon>StudentBalanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentEnrolmentHistoryView.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentEnrolmentHistoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentEnrolmentHistoryView.Designer.cs">
+      <DependentUpon>StudentEnrolmentHistoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentTab.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\BaseForm\StudentTab.Designer.cs">
+      <DependentUpon>StudentTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalAmountDue.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalAmountDue.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalCashDiscountReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalCashDiscountReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalCashReceiptDetailsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalCashReceiptDetailsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalCashReceiptQueryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalCashReceiptQueryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalCashReceiptSummarized.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalCashReceiptSummarized.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalClearance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalClearance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalCreditMemoProoflist.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalCreditMemoProoflist.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalFeeRegisterDetailed.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalFeeRegisterDetailed.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalFeeRegisterSummarized.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalFeeRegisterSummarized.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalReceipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalScheduleDetailsSubReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalScheduleDetailsSubReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalStatementOfAccountSummaryDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalStatementOfAccountSummaryDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalStudentAccountsReceivablePerTerm.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalStudentAccountsReceivablePerTerm.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalStudentBalanceProoflist.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalStudentBalanceProoflist.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalStudentDiscountReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalStudentDiscountReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalStudentStatementOfAccount.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalStudentStatementOfAccount.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalStudentStatementOfAccountForFinals.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalStudentStatementOfAccountForFinals.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubAmountDueList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubAmountDueList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubBreakDownDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubBreakDownDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubBreakDownSummarized.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubBreakDownSummarized.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubCashReceiptDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubCashReceiptDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubCashReceiptsSummarized.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubCashReceiptsSummarized.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubChargeDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubChargeDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubCollege.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubCollege.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubFeeRegisterDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubFeeRegisterDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubGradeSchool.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubGradeSchool.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubGraduateSchoolDoctorate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubGraduateSchoolDoctorate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubHighSchool.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubHighSchool.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubStudentBalances.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubStudentBalances.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystalSubStudentDiscountReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubStudentDiscountReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\CrystalReport\CrystaStudentChargesSummary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystaStudentChargesSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\CashReciptReport.cs">
+      <DependentUpon>CashReciptReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\CashReciptReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CashReciptReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\DiscountCreditMemoReport.cs">
+      <DependentUpon>DiscountCreditMemoReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\DiscountCreditMemoReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiscountCreditMemoReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\FeeRegister.cs">
+      <DependentUpon>FeeRegister.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\FeeRegister.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeeRegister.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\StudentAccountsReceivable.cs">
+      <DependentUpon>StudentAccountsReceivable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\StudentAccountsReceivable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentAccountsReceivable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\StudentLoad.cs">
+      <DependentUpon>StudentLoad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DataSet\StudentLoad.Designer.cs">
+      <DependentUpon>StudentLoad.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\AdditionalFeeSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\AdditionalFeeSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\ARStudentsPerTerm.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\ARStudentsPerTerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\CashieringSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\CashieringSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\ChartOfAccountSearchedOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\ChartOfAccountSearchedOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\OptionalFeeSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\OptionalFeeSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\ReceiptInformationCancelRecord.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\ReceiptInformationCancelRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\ReceiptInformationUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\ReceiptInformationUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\ReceiptNumberSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\ReceiptNumberSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\StudentEmployeeSearchedOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\StudentEmployeeSearchedOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\StudentScholarshipSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCashieringManager\DerivedForm\StudentScholarshipSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseClass\SchoolFeeLogic.cs" />
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeDetails.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeDetails.Designer.cs">
+      <DependentUpon>SchoolFeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeMaintenance.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeMaintenance.Designer.cs">
+      <DependentUpon>SchoolFeeMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeManager.Designer.cs">
+      <DependentUpon>SchoolFeeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeParticular.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeParticular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SchoolFeeParticular.Designer.cs">
+      <DependentUpon>SchoolFeeParticular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SearchOnTextboxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SearchOnTextboxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\BaseForm\SearchOnTextboxList.Designer.cs">
+      <DependentUpon>SearchOnTextboxList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\CrystalReport\CrystalGraduateSchoolDoctorate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalGraduateSchoolDoctorate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\CrystalReport\CrystalSchoolFees.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSchoolFees.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\CrystalReport\CrystalSubCollege.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubCollege.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\CrystalReport\CrystalSubGradeSchool.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubGradeSchool.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\CrystalReport\CrystalSubHighSchool.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubHighSchool.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DataSet\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DataSet\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DerivedForm\ParticularSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DerivedForm\ParticularSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeDetailsCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeDetailsCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeDetailsUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeDetailsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeParticularCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeParticularCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeParticularUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeParticularUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseClass\StudentLogic.cs" />
+    <Compile Include="ClassStudentManager\BaseForm\SearchOnTextboxListPerson.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\SearchOnTextboxListPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\SearchOnTextboxListPerson.Designer.cs">
+      <DependentUpon>SearchOnTextboxListPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentCashier.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentCashier.Designer.cs">
+      <DependentUpon>StudentCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\SearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\SearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\SearchList.Designer.cs">
+      <DependentUpon>SearchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentCourse.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentCourse.Designer.cs">
+      <DependentUpon>StudentCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentEntryLevel.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentEntryLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentEntryLevel.Designer.cs">
+      <DependentUpon>StudentEntryLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentIdGenerator.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentIdGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentIdGenerator.Designer.cs">
+      <DependentUpon>StudentIdGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\BaseForm\StudentManager.Designer.cs">
+      <DependentUpon>StudentManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\SearchOnTextBoxListCourse.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\SearchOnTextBoxListCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentCashierCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentCashierCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentCashierUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentCashierUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentCourseCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentCourseCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentCourseUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentCourseUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentEnrolmentHistory.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentEnrolmentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentEntryLevelCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentEntryLevelCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentEntryLevelUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentEntryLevelUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentGuidanceUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentGuidanceUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentManager\DerivedForm\StudentSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\BreakDownBankDeposit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BreakDownBankDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\CashDiscountReportControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CashDiscountReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\CashieringManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CashieringManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\CashReceiptQueryReportControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CashReceiptQueryReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\CashReceiptReportControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CashReceiptReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\CreditMemoReportControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CreditMemoReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\DiscountReportControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DiscountReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\FeeRegisterDetailedReportControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FeeRegisterDetailedReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\FeeRegisterSummarizedReportControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FeeRegisterSummarizedReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\MajorExamSchedule.resx">
+      <DependentUpon>MajorExamSchedule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\MiscellaneousIncome.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MiscellaneousIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\MultipleAdditionalFeeCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MultipleAdditionalFeeCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\ReceiptNumberInformation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReceiptNumberInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\SearchOnTextboxListChartOfAccount.resx">
+      <DependentUpon>SearchOnTextboxListChartOfAccount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\StudentAccountReceivableFiscalYear.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentAccountReceivableFiscalYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\StudentAdditionalFee.resx">
+      <DependentUpon>StudentAdditionalFee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\StudentBalanceReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentBalanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\StudentEnrolmentHistoryView.resx">
+      <DependentUpon>StudentEnrolmentHistoryView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\BaseForm\StudentTab.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalAmountDue.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalAmountDue.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalCashDiscountReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalCashDiscountReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalCashReceiptDetailsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalCashReceiptDetailsReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalCashReceiptQueryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalCashReceiptQueryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalCashReceiptSummarized.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalCashReceiptSummarized.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalClearance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalClearance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalCreditMemoProoflist.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalCreditMemoProoflist.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalFeeRegisterDetailed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalFeeRegisterDetailed.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalFeeRegisterSummarized.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalFeeRegisterSummarized.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReceipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalScheduleDetailsSubReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalScheduleDetailsSubReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalStatementOfAccountSummaryDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStatementOfAccountSummaryDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalStudentAccountsReceivablePerTerm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentAccountsReceivablePerTerm.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalStudentBalanceProoflist.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentBalanceProoflist.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalStudentDiscountReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentDiscountReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalStudentStatementOfAccount.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentStatementOfAccount.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalStudentStatementOfAccountForFinals.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentStatementOfAccountForFinals.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubAmountDueList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubAmountDueList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubBreakDownDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubBreakDownDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubBreakDownSummarized.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubBreakDownSummarized.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubCashReceiptDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubCashReceiptDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubCashReceiptsSummarized.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubCashReceiptsSummarized.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubChargeDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubChargeDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubCollege.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubCollege.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubFeeRegisterDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubFeeRegisterDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubGradeSchool.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubGradeSchool.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubGraduateSchoolDoctorate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubGraduateSchoolDoctorate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubHighSchool.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubHighSchool.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubStudentBalances.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubStudentBalances.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystalSubStudentDiscountReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubStudentDiscountReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\CrystalReport\CrystaStudentChargesSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystaStudentChargesSummary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\AdditionalFeeSearchOnTextBoxList.resx">
+      <DependentUpon>AdditionalFeeSearchOnTextBoxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\ARStudentsPerTerm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ARStudentsPerTerm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BreakDownBankDepositCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\BreakDownBankDepositUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BreakDownBankDepositUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\CashieringSearchList.resx">
+      <DependentUpon>CashieringSearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\ChartOfAccountSearchedOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChartOfAccountSearchedOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\OptionalFeeSearchOnTextBoxList.resx">
+      <DependentUpon>OptionalFeeSearchOnTextBoxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\ReceiptInformationCancelRecord.resx">
+      <DependentUpon>ReceiptInformationCancelRecord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\ReceiptInformationUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReceiptInformationUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\ReceiptNumberSearchOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReceiptNumberSearchOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\StudentEmployeeSearchedOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentEmployeeSearchedOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCashieringManager\DerivedForm\StudentScholarshipSearchOnTextBoxList.resx">
+      <DependentUpon>StudentScholarshipSearchOnTextBoxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\BaseForm\SchoolFeeDetails.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolFeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\BaseForm\SchoolFeeMaintenance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolFeeMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\BaseForm\SchoolFeeManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolFeeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\BaseForm\SchoolFeeParticular.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolFeeParticular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\BaseForm\SearchOnTextboxList.resx">
+      <DependentUpon>SearchOnTextboxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\CrystalReport\CrystalGraduateSchoolDoctorate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalGraduateSchoolDoctorate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\CrystalReport\CrystalSchoolFees.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSchoolFees.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\CrystalReport\CrystalSubCollege.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubCollege.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\CrystalReport\CrystalSubGradeSchool.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubGradeSchool.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\CrystalReport\CrystalSubHighSchool.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubHighSchool.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\DerivedForm\ParticularSearchOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ParticularSearchOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeDetailsCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolFeeDetailsCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeDetailsUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolFeeDetailsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeParticularCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolFeeParticularCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolFeeManager\DerivedForm\SchoolFeeParticularUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolFeeParticularUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\BaseForm\SearchOnTextboxListPerson.resx">
+      <DependentUpon>SearchOnTextboxListPerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\BaseForm\StudentCashier.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\BaseForm\SearchList.resx">
+      <DependentUpon>SearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\BaseForm\StudentCourse.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\BaseForm\StudentEntryLevel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentEntryLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\BaseForm\StudentIdGenerator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentIdGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\BaseForm\StudentManager.resx">
+      <DependentUpon>StudentManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\DerivedForm\SearchOnTextBoxListCourse.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchOnTextBoxListCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\DerivedForm\StudentCashierCreate.resx">
+      <DependentUpon>StudentCashierCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\DerivedForm\StudentCashierUpdate.resx">
+      <DependentUpon>StudentCashierUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\DerivedForm\StudentCourseCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentCourseCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\DerivedForm\StudentCourseUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentCourseUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\DerivedForm\StudentEnrolmentHistory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentEnrolmentHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\DerivedForm\StudentEntryLevelCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentEntryLevelCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\DerivedForm\StudentEntryLevelUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentEntryLevelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\DerivedForm\StudentGuidanceUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentGuidanceUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentManager\DerivedForm\StudentSearchList.resx">
+      <DependentUpon>StudentSearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassCashieringManager\DataSet\CashReciptReport.xsc">
+      <DependentUpon>CashReciptReport.xsd</DependentUpon>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\CashReciptReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>CashReciptReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\CashReciptReport.xss">
+      <DependentUpon>CashReciptReport.xsd</DependentUpon>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\DiscountCreditMemoReport.xsc">
+      <DependentUpon>DiscountCreditMemoReport.xsd</DependentUpon>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\DiscountCreditMemoReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DiscountCreditMemoReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\DiscountCreditMemoReport.xss">
+      <DependentUpon>DiscountCreditMemoReport.xsd</DependentUpon>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\FeeRegister.xsc">
+      <DependentUpon>FeeRegister.xsd</DependentUpon>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\FeeRegister.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FeeRegister.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\FeeRegister.xss">
+      <DependentUpon>FeeRegister.xsd</DependentUpon>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\StudentAccountsReceivable.xsc">
+      <DependentUpon>StudentAccountsReceivable.xsd</DependentUpon>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\StudentAccountsReceivable.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentAccountsReceivable.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\StudentAccountsReceivable.xss">
+      <DependentUpon>StudentAccountsReceivable.xsd</DependentUpon>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\StudentLoad.xsc">
+      <DependentUpon>StudentLoad.xsd</DependentUpon>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\StudentLoad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentLoad.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassCashieringManager\DataSet\StudentLoad.xss">
+      <DependentUpon>StudentLoad.xsd</DependentUpon>
+    </None>
+    <None Include="ClassSchoolFeeManager\DataSet\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ClassSchoolFeeManager\DataSet\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassSchoolFeeManager\DataSet\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,169 @@
+
+TO GET CACHED DATA
+
+	==> instantiate from RemCntTeacherLoadingManager
+	call the function GetDataSetForTeacherLoad(CommonExchange.SysAccess userinfo)
+
+	this will return a DATASET which contains the following table:
+
+	Table Name: EmployeeInformationTable
+
+				sysid_employee			String
+				employee_id				String
+				card_number				String
+				last_name				String
+				first_name				String
+				middle_name				String
+				department_id			String
+				status_id				Byte		TemporaryPartTime = 1,
+        											Probitionary = 2,
+        											Regular = 3,
+        											LayOff = 4
+
+				type_no					Byte		GraduateSchoolFaculty = 1, 
+													GraduateSchoolCollegeFaculty = 2, 
+													GraduateSchoolNursingFaculty = 3,
+        											GraduateSchoolHighSchoolFaculty = 4,
+        											GraduateSchoolGradeKinderFaculty = 5,
+        											CollegeFaculty = 6,
+        											NursingFaculty = 7,
+        											HighSchoolFaculty = 8,
+        											GradeKinderFaculty = 9,
+        											NonTeachingStaff = 10,
+        											AcademicNonTeaching = 11,
+        											Maintenance = 12
+				type_description		String	
+			
+
+				rank_group_no			Byte		CollegeFaculty = 1,
+        											HighSchoolGradeSchoolFaculty = 2,
+        											StaffAcademicNonTeaching = 3,
+        											Maintenance = 4
+				rank_group_description 	String
+				status_description		String
+				department_name			String
+
+	Table Name: SchoolYearTable
+
+				year_id 				String
+            	year_description		String
+            	date_start				String
+            	date_end				String
+
+	Table Name: SemesterInformationTable
+
+            	sysid_semester			String
+            	year_id					String
+				semester_id				Byte
+           		date_start				String
+            	date_end				String
+            	year_description		String
+            	semester_description	String
+
+	Table Name: WeekDayTable
+
+				week_id					Byte		1, 2, 3, 4....
+				week_description		String		Monday, Tuesday, Wednesday...
+				acronym					String		M, T, W
+
+	Table Name: WeekTimeTable
+
+				time_id					Byte		1, 2, 3....
+				time_description		String		06:00, 06:10, 06:20...	
+
+
+TO GET THE SUBJECT SCHEDULE DETAILS WITH AND WITHOUT TEACHER LOAD
+
+	==> instantiate from RemCntTeacherLoadingManager
+	call the function SelectByDateStartEndForTeacherLoadingTeacherLoad(CommonExchange.SysAccess userInfo, String dateStart,
+            String dateEnd, String serverDateTime)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_scheddetails_auxdetails		String
+				sysid_classroom						String
+				field_room							String
+				is_classroom						Boolean		
+				section								String
+				is_team_teaching					Boolean
+				year_semester_id					String
+				department_id						String
+				subject_service_code				String
+				descriptive_title					String
+				is_semestral						Boolean
+				group_no							Byte		GraduateSchoolDoctorate = 1,
+        														College = 2,
+        														HighSchool = 3,
+        														GradeSchool = 4
+				classroom_code						String
+				load_id								Int64
+				sysid_employee						String
+				load_date							String
+				deload_date							String
+				lecture_units						Byte
+				lab_units							Byte
+				no_hours							String		
+				is_auxiliary						Boolean
+				is_premature_deloaded				Boolean
+				day_time							String
+
+	call this function evertime the user selects a school year
+
+	==> after calling this function, create a DATATABLE "teacherLoadTable" the which contains the following fields
+
+				load_id						Int64
+				sysid_scheddetails			String
+				sysid_auxdetails			String
+				sysid_employee				String		
+				is_auxiliary				Boolean
+
+	this will be used for the InsertDeleteTeacherLoad paramater
+
+TO GET THE SUBJECT SCHEDULE DAY AND TIME WITH AND WITHOUT TEACHER LOAD
+
+	==> instantiate from RemCntSubjectSchedulingManager
+	call the function SelectBySysIDScheduleDetailsListSubjectSchedule(CommonExchange.SysAccess userInfo, String scheduleDetailsSysIdList)
+
+	Parameter requirements:
+
+		scheduleDetailsSysIdList SYSSDL00000001, SYSSDL00000006, SYSSDL00000005
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_scheddetails 			String
+				week_id						Byte
+				time_id						Byte
+
+
+
+TO INSERT OR DELETE A NEW TEACHER LOAD
+
+	==> instantiate from RemCntTeacherLoadingManager
+	call the function InsertDeleteTeacherLoad(CommonExchange.SysAccess userInfo, DataTable teacherLoadTable)
+
+	the TABLE: "teacherLoadTable" must contain the following fields
+
+				load_id						Int64
+				sysid_scheddetails			String
+				sysid_auxdetails			String
+				sysid_employee				String		
+				is_auxiliary				Boolean
+
+
+BUSINESS RULES
+
+	1. Only the Office user, VP of Academic Affairs can subject load a teacher
+	2. Only the Payroll Master, VP of Finance Affairs can deload a subject from the teacher if the subject load
+		is already recorded in the database.
+	3. The office user can load an auxiliary service to teacher if the auxiliary service department assigned to it is the same
+		department assigned to the said auxiliary service
+	4. The VP of Academic Affairs cannot load an auxiliary service
+
+		
+
+	
+
+	
+		
+
+	

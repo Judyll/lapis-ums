@@ -1,0 +1,50 @@
+CACHED DATA
+
+	Table Name: SchoolYearTable
+
+				year_id 				String
+            	year_description		String
+            	date_start				String
+            	date_end				String
+				is_summer				Boolean
+
+	Table Name: SemesterInformationTable
+
+            	sysid_semester			String
+            	year_id					String
+				semester_id				Byte
+           		date_start				String
+            	date_end				String
+            	year_description		String
+            	semester_description	String
+
+	Table Name: WeekDayTable
+
+				week_id					Byte
+				week_description		String
+				acronym					String
+
+	Table Name: WeekTimeTable
+
+				time_id					Byte
+				time_description		String
+
+	Table Name: ClassroomInformationTable
+
+				sysid_classroom			String
+				classroom_code			String
+				classroom_description	String
+				maximum_capacity		Byte
+				other_information		String	
+
+BUSINESS RULES:
+
+	1. If the subject schedule details is fused, just set the number of units to 0
+	2. For any user, the delete a subject schedule button is disabled if one of the subject schedule details
+		is already loaded to an employee.
+	3. The Office and VP of Academic Affairs users can create, update, and delete a subject schedule and details
+	4. The Cashier and VP of Finance users can only update the amount if it is fixed on the subject schedule
+
+
+
+		

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LoanRemittanceDataSet" targetNamespace="http://tempuri.org/LoanRemittanceDataSet.xsd" xmlns:mstns="http://tempuri.org/LoanRemittanceDataSet.xsd" xmlns="http://tempuri.org/LoanRemittanceDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LoanRemittanceDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="LoanRemittanceDataSet" msprop:Generator_DataSetName="LoanRemittanceDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="employee_remittance" msprop:Generator_UserTableName="employee_remittance" msprop:Generator_RowDeletedName="employee_remittanceRowDeleted" msprop:Generator_TableClassName="employee_remittanceDataTable" msprop:Generator_RowChangedName="employee_remittanceRowChanged" msprop:Generator_RowClassName="employee_remittanceRow" msprop:Generator_RowChangingName="employee_remittanceRowChanging" msprop:Generator_RowEvArgName="employee_remittanceRowChangeEvent" msprop:Generator_RowEvHandlerName="employee_remittanceRowChangeEventHandler" msprop:Generator_TablePropName="employee_remittance" msprop:Generator_TableVarName="tableemployee_remittance" msprop:Generator_RowDeletingName="employee_remittanceRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="remittance_id" msprop:Generator_UserColumnName="remittance_id" msprop:Generator_ColumnPropNameInRow="remittance_id" msprop:Generator_ColumnVarNameInTable="columnremittance_id" msprop:Generator_ColumnPropNameInTable="remittance_idColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="remittance_date" msprop:Generator_UserColumnName="remittance_date" msprop:Generator_ColumnPropNameInRow="remittance_date" msprop:Generator_ColumnVarNameInTable="columnremittance_date" msprop:Generator_ColumnPropNameInTable="remittance_dateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="pay_month" msprop:Generator_UserColumnName="pay_month" msprop:Generator_ColumnPropNameInRow="pay_month" msprop:Generator_ColumnVarNameInTable="columnpay_month" msprop:Generator_ColumnPropNameInTable="pay_monthColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="pay_balance" msprop:Generator_UserColumnName="pay_balance" msprop:Generator_ColumnPropNameInRow="pay_balance" msprop:Generator_ColumnVarNameInTable="columnpay_balance" msprop:Generator_ColumnPropNameInTable="pay_balanceColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="amount_paid" msprop:Generator_UserColumnName="amount_paid" msprop:Generator_ColumnPropNameInRow="amount_paid" msprop:Generator_ColumnVarNameInTable="columnamount_paid" msprop:Generator_ColumnPropNameInTable="amount_paidColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="amount_balance" msprop:Generator_UserColumnName="amount_balance" msprop:Generator_ColumnPropNameInRow="amount_balance" msprop:Generator_ColumnVarNameInTable="columnamount_balance" msprop:Generator_ColumnPropNameInTable="amount_balanceColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StudentEnrolled" targetNamespace="http://tempuri.org/StudentEnrolled.xsd" xmlns:mstns="http://tempuri.org/StudentEnrolled.xsd" xmlns="http://tempuri.org/StudentEnrolled.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StudentEnrolled" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="StudentEnrolled" msprop:Generator_DataSetName="StudentEnrolled">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="course_table" msprop:Generator_UserTableName="course_table" msprop:Generator_RowDeletedName="course_tableRowDeleted" msprop:Generator_RowChangedName="course_tableRowChanged" msprop:Generator_RowClassName="course_tableRow" msprop:Generator_RowChangingName="course_tableRowChanging" msprop:Generator_RowEvArgName="course_tableRowChangeEvent" msprop:Generator_RowEvHandlerName="course_tableRowChangeEventHandler" msprop:Generator_TableClassName="course_tableDataTable" msprop:Generator_TableVarName="tablecourse_table" msprop:Generator_RowDeletingName="course_tableRowDeleting" msprop:Generator_TablePropName="course_table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="course_id" msprop:Generator_UserColumnName="course_id" msprop:Generator_ColumnPropNameInRow="course_id" msprop:Generator_ColumnVarNameInTable="columncourse_id" msprop:Generator_ColumnPropNameInTable="course_idColumn" type="xs:string" />
+              <xs:element name="course_title" msprop:Generator_UserColumnName="course_title" msprop:Generator_ColumnPropNameInRow="course_title" msprop:Generator_ColumnVarNameInTable="columncourse_title" msprop:Generator_ColumnPropNameInTable="course_titleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="course_acronym" msprop:Generator_UserColumnName="course_acronym" msprop:Generator_ColumnPropNameInRow="course_acronym" msprop:Generator_ColumnVarNameInTable="columncourse_acronym" msprop:Generator_ColumnPropNameInTable="course_acronymColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="department_name" msprop:Generator_UserColumnName="department_name" msprop:Generator_ColumnPropNameInRow="department_name" msprop:Generator_ColumnVarNameInTable="columndepartment_name" msprop:Generator_ColumnPropNameInTable="department_nameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="department_acronym" msprop:Generator_UserColumnName="department_acronym" msprop:Generator_ColumnPropNameInRow="department_acronym" msprop:Generator_ColumnVarNameInTable="columndepartment_acronym" msprop:Generator_ColumnPropNameInTable="department_acronymColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="year_level_table" msprop:Generator_UserTableName="year_level_table" msprop:Generator_RowDeletedName="year_level_tableRowDeleted" msprop:Generator_RowChangedName="year_level_tableRowChanged" msprop:Generator_RowClassName="year_level_tableRow" msprop:Generator_RowChangingName="year_level_tableRowChanging" msprop:Generator_RowEvArgName="year_level_tableRowChangeEvent" msprop:Generator_RowEvHandlerName="year_level_tableRowChangeEventHandler" msprop:Generator_TableClassName="year_level_tableDataTable" msprop:Generator_TableVarName="tableyear_level_table" msprop:Generator_RowDeletingName="year_level_tableRowDeleting" msprop:Generator_TablePropName="year_level_table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="year_level_id" msprop:Generator_UserColumnName="year_level_id" msprop:Generator_ColumnPropNameInRow="year_level_id" msprop:Generator_ColumnVarNameInTable="columnyear_level_id" msprop:Generator_ColumnPropNameInTable="year_level_idColumn" type="xs:string" />
+              <xs:element name="year_level_description" msprop:Generator_UserColumnName="year_level_description" msprop:Generator_ColumnPropNameInRow="year_level_description" msprop:Generator_ColumnVarNameInTable="columnyear_level_description" msprop:Generator_ColumnPropNameInTable="year_level_descriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="acronym" msprop:Generator_UserColumnName="acronym" msprop:Generator_ColumnPropNameInRow="acronym" msprop:Generator_ColumnVarNameInTable="columnacronym" msprop:Generator_ColumnPropNameInTable="acronymColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="student_table_male" msprop:Generator_UserTableName="student_table_male" msprop:Generator_RowDeletedName="student_table_maleRowDeleted" msprop:Generator_RowChangedName="student_table_maleRowChanged" msprop:Generator_RowClassName="student_table_maleRow" msprop:Generator_RowChangingName="student_table_maleRowChanging" msprop:Generator_RowEvArgName="student_table_maleRowChangeEvent" msprop:Generator_RowEvHandlerName="student_table_maleRowChangeEventHandler" msprop:Generator_TableClassName="student_table_maleDataTable" msprop:Generator_TableVarName="tablestudent_table_male" msprop:Generator_RowDeletingName="student_table_maleRowDeleting" msprop:Generator_TablePropName="student_table_male">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="student_name_m" msprop:Generator_UserColumnName="student_name_m" msprop:Generator_ColumnPropNameInRow="student_name_m" msprop:Generator_ColumnVarNameInTable="columnstudent_name_m" msprop:Generator_ColumnPropNameInTable="student_name_mColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="student_id_m" msprop:Generator_UserColumnName="student_id_m" msprop:Generator_ColumnPropNameInRow="student_id_m" msprop:Generator_ColumnVarNameInTable="columnstudent_id_m" msprop:Generator_ColumnPropNameInTable="student_id_mColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sysid_student_m" msprop:Generator_UserColumnName="sysid_student_m" msprop:Generator_ColumnPropNameInRow="sysid_student_m" msprop:Generator_ColumnVarNameInTable="columnsysid_student_m" msprop:Generator_ColumnPropNameInTable="sysid_student_mColumn" type="xs:string" />
+              <xs:element name="course_id" msprop:Generator_UserColumnName="course_id" msprop:Generator_ColumnPropNameInRow="course_id" msprop:Generator_ColumnVarNameInTable="columncourse_id" msprop:Generator_ColumnPropNameInTable="course_idColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="year_level_id" msprop:Generator_UserColumnName="year_level_id" msprop:Generator_ColumnPropNameInRow="year_level_id" msprop:Generator_ColumnVarNameInTable="columnyear_level_id" msprop:Generator_ColumnPropNameInTable="year_level_idColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="student_table_female" msprop:Generator_UserTableName="student_table_female" msprop:Generator_RowDeletedName="student_table_femaleRowDeleted" msprop:Generator_RowChangedName="student_table_femaleRowChanged" msprop:Generator_RowClassName="student_table_femaleRow" msprop:Generator_RowChangingName="student_table_femaleRowChanging" msprop:Generator_RowEvArgName="student_table_femaleRowChangeEvent" msprop:Generator_RowEvHandlerName="student_table_femaleRowChangeEventHandler" msprop:Generator_TableClassName="student_table_femaleDataTable" msprop:Generator_TableVarName="tablestudent_table_female" msprop:Generator_RowDeletingName="student_table_femaleRowDeleting" msprop:Generator_TablePropName="student_table_female">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="student_name_f" msprop:Generator_UserColumnName="student_name_f" msprop:Generator_ColumnPropNameInRow="student_name_f" msprop:Generator_ColumnVarNameInTable="columnstudent_name_f" msprop:Generator_ColumnPropNameInTable="student_name_fColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="student_id_f" msprop:Generator_UserColumnName="student_id_f" msprop:Generator_ColumnPropNameInRow="student_id_f" msprop:Generator_ColumnVarNameInTable="columnstudent_id_f" msprop:Generator_ColumnPropNameInTable="student_id_fColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sysid_student_f" msprop:Generator_UserColumnName="sysid_student_f" msprop:Generator_ColumnPropNameInRow="sysid_student_f" msprop:Generator_ColumnVarNameInTable="columnsysid_student_f" msprop:Generator_ColumnPropNameInTable="sysid_student_fColumn" type="xs:string" />
+              <xs:element name="course_id" msprop:Generator_UserColumnName="course_id" msprop:Generator_ColumnPropNameInRow="course_id" msprop:Generator_ColumnVarNameInTable="columncourse_id" msprop:Generator_ColumnPropNameInTable="course_idColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="year_level_id" msprop:Generator_UserColumnName="year_level_id" msprop:Generator_ColumnPropNameInRow="year_level_id" msprop:Generator_ColumnVarNameInTable="columnyear_level_id" msprop:Generator_ColumnPropNameInTable="year_level_idColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="student_table_unassign" msprop:Generator_UserTableName="student_table_unassign" msprop:Generator_RowDeletedName="student_table_unassignRowDeleted" msprop:Generator_RowChangedName="student_table_unassignRowChanged" msprop:Generator_RowClassName="student_table_unassignRow" msprop:Generator_RowChangingName="student_table_unassignRowChanging" msprop:Generator_RowEvArgName="student_table_unassignRowChangeEvent" msprop:Generator_RowEvHandlerName="student_table_unassignRowChangeEventHandler" msprop:Generator_TableClassName="student_table_unassignDataTable" msprop:Generator_TableVarName="tablestudent_table_unassign" msprop:Generator_RowDeletingName="student_table_unassignRowDeleting" msprop:Generator_TablePropName="student_table_unassign">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="student_name_u" msprop:Generator_UserColumnName="student_name_u" msprop:Generator_ColumnPropNameInRow="student_name_u" msprop:Generator_ColumnVarNameInTable="columnstudent_name_u" msprop:Generator_ColumnPropNameInTable="student_name_uColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="student_id_u" msprop:Generator_UserColumnName="student_id_u" msprop:Generator_ColumnPropNameInRow="student_id_u" msprop:Generator_ColumnVarNameInTable="columnstudent_id_u" msprop:Generator_ColumnPropNameInTable="student_id_uColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sysid_student_u" msprop:Generator_UserColumnName="sysid_student_u" msprop:Generator_ColumnPropNameInRow="sysid_student_u" msprop:Generator_ColumnVarNameInTable="columnsysid_student_u" msprop:Generator_ColumnPropNameInTable="sysid_student_uColumn" type="xs:string" />
+              <xs:element name="course_id" msprop:Generator_UserColumnName="course_id" msprop:Generator_ColumnPropNameInRow="course_id" msprop:Generator_ColumnVarNameInTable="columncourse_id" msprop:Generator_ColumnPropNameInTable="course_idColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="year_level_id" msprop:Generator_UserColumnName="year_level_id" msprop:Generator_ColumnPropNameInRow="year_level_id" msprop:Generator_ColumnVarNameInTable="columnyear_level_id" msprop:Generator_ColumnPropNameInTable="year_level_idColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="no_of_student_table" msprop:Generator_UserTableName="no_of_student_table" msprop:Generator_RowDeletedName="no_of_student_tableRowDeleted" msprop:Generator_RowChangedName="no_of_student_tableRowChanged" msprop:Generator_RowClassName="no_of_student_tableRow" msprop:Generator_RowChangingName="no_of_student_tableRowChanging" msprop:Generator_RowEvArgName="no_of_student_tableRowChangeEvent" msprop:Generator_RowEvHandlerName="no_of_student_tableRowChangeEventHandler" msprop:Generator_TableClassName="no_of_student_tableDataTable" msprop:Generator_TableVarName="tableno_of_student_table" msprop:Generator_RowDeletingName="no_of_student_tableRowDeleting" msprop:Generator_TablePropName="no_of_student_table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="course_id" msprop:Generator_UserColumnName="course_id" msprop:Generator_ColumnVarNameInTable="columncourse_id" msprop:Generator_ColumnPropNameInRow="course_id" msprop:Generator_ColumnPropNameInTable="course_idColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="year_level_id" msprop:Generator_UserColumnName="year_level_id" msprop:Generator_ColumnVarNameInTable="columnyear_level_id" msprop:Generator_ColumnPropNameInRow="year_level_id" msprop:Generator_ColumnPropNameInTable="year_level_idColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="no_of_students" msprop:Generator_UserColumnName="no_of_students" msprop:Generator_ColumnVarNameInTable="columnno_of_students" msprop:Generator_ColumnPropNameInRow="no_of_students" msprop:Generator_ColumnPropNameInTable="no_of_studentsColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="student_summary_table" msprop:Generator_UserTableName="student_summary_table" msprop:Generator_RowDeletedName="student_summary_tableRowDeleted" msprop:Generator_RowChangedName="student_summary_tableRowChanged" msprop:Generator_RowClassName="student_summary_tableRow" msprop:Generator_RowChangingName="student_summary_tableRowChanging" msprop:Generator_RowEvArgName="student_summary_tableRowChangeEvent" msprop:Generator_RowEvHandlerName="student_summary_tableRowChangeEventHandler" msprop:Generator_TableClassName="student_summary_tableDataTable" msprop:Generator_TableVarName="tablestudent_summary_table" msprop:Generator_RowDeletingName="student_summary_tableRowDeleting" msprop:Generator_TablePropName="student_summary_table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="course" msprop:Generator_UserColumnName="course" msprop:Generator_ColumnVarNameInTable="columncourse" msprop:Generator_ColumnPropNameInRow="course" msprop:Generator_ColumnPropNameInTable="courseColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="year_level" msprop:Generator_UserColumnName="year_level" msprop:Generator_ColumnVarNameInTable="columnyear_level" msprop:Generator_ColumnPropNameInRow="year_level" msprop:Generator_ColumnPropNameInTable="year_levelColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="male" msprop:Generator_UserColumnName="male" msprop:Generator_ColumnVarNameInTable="columnmale" msprop:Generator_ColumnPropNameInRow="male" msprop:Generator_ColumnPropNameInTable="maleColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="female" msprop:Generator_UserColumnName="female" msprop:Generator_ColumnVarNameInTable="columnfemale" msprop:Generator_ColumnPropNameInRow="female" msprop:Generator_ColumnPropNameInTable="femaleColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="unassign" msprop:Generator_UserColumnName="unassign" msprop:Generator_ColumnVarNameInTable="columnunassign" msprop:Generator_ColumnPropNameInRow="unassign" msprop:Generator_ColumnPropNameInTable="unassignColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_UserColumnName="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="bold" msprop:Generator_UserColumnName="bold" msprop:Generator_ColumnPropNameInRow="bold" msprop:Generator_ColumnVarNameInTable="columnbold" msprop:Generator_ColumnPropNameInTable="boldColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="student_table" msprop:Generator_UserTableName="student_table" msprop:Generator_RowDeletedName="student_tableRowDeleted" msprop:Generator_TableClassName="student_tableDataTable" msprop:Generator_RowChangedName="student_tableRowChanged" msprop:Generator_RowClassName="student_tableRow" msprop:Generator_RowChangingName="student_tableRowChanging" msprop:Generator_RowEvArgName="student_tableRowChangeEvent" msprop:Generator_RowEvHandlerName="student_tableRowChangeEventHandler" msprop:Generator_TablePropName="student_table" msprop:Generator_TableVarName="tablestudent_table" msprop:Generator_RowDeletingName="student_tableRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="num_count" msprop:Generator_UserColumnName="num_count" msprop:Generator_ColumnPropNameInRow="num_count" msprop:Generator_ColumnVarNameInTable="columnnum_count" msprop:Generator_ColumnPropNameInTable="num_countColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="last_name" msprop:Generator_UserColumnName="last_name" msprop:Generator_ColumnPropNameInRow="last_name" msprop:Generator_ColumnVarNameInTable="columnlast_name" msprop:Generator_ColumnPropNameInTable="last_nameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="first_name" msprop:Generator_UserColumnName="first_name" msprop:Generator_ColumnPropNameInRow="first_name" msprop:Generator_ColumnVarNameInTable="columnfirst_name" msprop:Generator_ColumnPropNameInTable="first_nameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="middle_name" msprop:Generator_UserColumnName="middle_name" msprop:Generator_ColumnPropNameInRow="middle_name" msprop:Generator_ColumnVarNameInTable="columnmiddle_name" msprop:Generator_ColumnPropNameInTable="middle_nameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="date_of_birth" msprop:Generator_UserColumnName="date_of_birth" msprop:Generator_ColumnPropNameInRow="date_of_birth" msprop:Generator_ColumnVarNameInTable="columndate_of_birth" msprop:Generator_ColumnPropNameInTable="date_of_birthColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="beneficiary" msprop:Generator_UserColumnName="beneficiary" msprop:Generator_ColumnPropNameInRow="beneficiary" msprop:Generator_ColumnVarNameInTable="columnbeneficiary" msprop:Generator_ColumnPropNameInTable="beneficiaryColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:course_table" />
+      <xs:field xpath="mstns:course_id" />
+    </xs:unique>
+    <xs:unique name="year_level_table_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:year_level_table" />
+      <xs:field xpath="mstns:year_level_id" />
+    </xs:unique>
+    <xs:unique name="student_table_male_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:student_table_male" />
+      <xs:field xpath="mstns:sysid_student_m" />
+    </xs:unique>
+    <xs:unique name="student_table_female_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:student_table_female" />
+      <xs:field xpath="mstns:sysid_student_f" />
+    </xs:unique>
+    <xs:unique name="student_table_unassign_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:student_table_unassign" />
+      <xs:field xpath="mstns:sysid_student_u" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="course_table_student_table" msdata:parent="course_table" msdata:child="student_table_male" msdata:parentkey="course_id" msdata:childkey="course_id" msprop:Generator_UserRelationName="course_table_student_table" msprop:Generator_RelationVarName="relationcourse_table_student_table" msprop:Generator_UserChildTable="student_table_male" msprop:Generator_UserParentTable="course_table" msprop:Generator_ParentPropName="course_tableRow" msprop:Generator_ChildPropName="Getstudent_table_maleRows" />
+      <msdata:Relationship name="year_level_table_student_table" msdata:parent="year_level_table" msdata:child="student_table_male" msdata:parentkey="year_level_id" msdata:childkey="year_level_id" msprop:Generator_UserRelationName="year_level_table_student_table" msprop:Generator_RelationVarName="relationyear_level_table_student_table" msprop:Generator_UserChildTable="student_table_male" msprop:Generator_UserParentTable="year_level_table" msprop:Generator_ParentPropName="year_level_tableRow" msprop:Generator_ChildPropName="Getstudent_table_maleRows" />
+      <msdata:Relationship name="course_table_student_table_female" msdata:parent="course_table" msdata:child="student_table_female" msdata:parentkey="course_id" msdata:childkey="course_id" msprop:Generator_UserRelationName="course_table_student_table_female" msprop:Generator_RelationVarName="relationcourse_table_student_table_female" msprop:Generator_UserChildTable="student_table_female" msprop:Generator_UserParentTable="course_table" msprop:Generator_ParentPropName="course_tableRow" msprop:Generator_ChildPropName="Getstudent_table_femaleRows" />
+      <msdata:Relationship name="course_table_student_table_unassign" msdata:parent="course_table" msdata:child="student_table_unassign" msdata:parentkey="course_id" msdata:childkey="course_id" msprop:Generator_UserRelationName="course_table_student_table_unassign" msprop:Generator_RelationVarName="relationcourse_table_student_table_unassign" msprop:Generator_UserChildTable="student_table_unassign" msprop:Generator_UserParentTable="course_table" msprop:Generator_ParentPropName="course_tableRow" msprop:Generator_ChildPropName="Getstudent_table_unassignRows" />
+      <msdata:Relationship name="year_level_table_student_table_unassign" msdata:parent="year_level_table" msdata:child="student_table_unassign" msdata:parentkey="year_level_id" msdata:childkey="year_level_id" msprop:Generator_UserRelationName="year_level_table_student_table_unassign" msprop:Generator_RelationVarName="relationyear_level_table_student_table_unassign" msprop:Generator_UserChildTable="student_table_unassign" msprop:Generator_UserParentTable="year_level_table" msprop:Generator_ParentPropName="year_level_tableRow" msprop:Generator_ChildPropName="Getstudent_table_unassignRows" />
+      <msdata:Relationship name="year_level_table_student_table_female" msdata:parent="year_level_table" msdata:child="student_table_female" msdata:parentkey="year_level_id" msdata:childkey="year_level_id" msprop:Generator_UserRelationName="year_level_table_student_table_female" msprop:Generator_RelationVarName="relationyear_level_table_student_table_female" msprop:Generator_UserChildTable="student_table_female" msprop:Generator_UserParentTable="year_level_table" msprop:Generator_ParentPropName="year_level_tableRow" msprop:Generator_ChildPropName="Getstudent_table_femaleRows" />
+      <msdata:Relationship name="course_table_no_of_student_table" msdata:parent="course_table" msdata:child="no_of_student_table" msdata:parentkey="course_id" msdata:childkey="course_id" msprop:Generator_UserRelationName="course_table_no_of_student_table" msprop:Generator_RelationVarName="relationcourse_table_no_of_student_table" msprop:Generator_UserChildTable="no_of_student_table" msprop:Generator_UserParentTable="course_table" msprop:Generator_ParentPropName="course_tableRow" msprop:Generator_ChildPropName="Getno_of_student_tableRows" />
+      <msdata:Relationship name="year_level_table_no_of_student_table" msdata:parent="year_level_table" msdata:child="no_of_student_table" msdata:parentkey="year_level_id" msdata:childkey="year_level_id" msprop:Generator_UserRelationName="year_level_table_no_of_student_table" msprop:Generator_RelationVarName="relationyear_level_table_no_of_student_table" msprop:Generator_UserChildTable="no_of_student_table" msprop:Generator_UserParentTable="year_level_table" msprop:Generator_ParentPropName="year_level_tableRow" msprop:Generator_ChildPropName="Getno_of_student_tableRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

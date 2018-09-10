@@ -1,0 +1,57 @@
+'System Administrator')
+'Payroll Master')
+'Office User')
+'College Registrar')
+'HS/GS Registrar')
+'Student''s Data Controller')
+'ID Maker')
+'GateKeepers')
+'Cashier')
+'Bookkeeper')
+'VP of Finance Affairs')
+'Secretary of the President')
+'VP of Academic Affairs')
+
+
+
+--as administrator
+'Admin', 'u$3r'
+
+--as payroll master
+'Payroll', 'u$3r'
+
+--as college registrar
+'Registrar', 'u$3r'
+
+--as office user (CBED)
+'Business', 'u$3r'
+
+--as office user (CAED)
+'Arts', 'u$3r'
+
+--as office user (NURSING)
+'Nursing', 'u$3r'
+
+--as office user (HIGH SCHOOL)
+'High', 'u$3r'
+
+--as student's data controller
+'Controller', 'u$3r'
+
+--as id maker
+'Maker', 'u$3r'
+
+--as cashier
+'Cashier', 'u$3r'
+
+--as book keeper
+'Bookkeeper', 'u$3r'
+
+--as VP of Finance Affairs
+'Finance Affairs', 'u$3r'
+
+--as Secretary of the VP of Academic Affairs
+'Secretary', 'u$3r'
+
+--as VP of Academic Affairs
+'Academic Affairs', 'u$3r'

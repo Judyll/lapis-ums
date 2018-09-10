@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccountingDataSet" targetNamespace="http://tempuri.org/AccountingDataSet.xsd" xmlns:mstns="http://tempuri.org/AccountingDataSet.xsd" xmlns="http://tempuri.org/AccountingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccountingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AccountingDataSet" msprop:Generator_DataSetName="AccountingDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="account_table" msprop:Generator_UserTableName="account_table" msprop:Generator_RowDeletedName="account_tableRowDeleted" msprop:Generator_RowChangedName="account_tableRowChanged" msprop:Generator_RowClassName="account_tableRow" msprop:Generator_RowChangingName="account_tableRowChanging" msprop:Generator_RowEvArgName="account_tableRowChangeEvent" msprop:Generator_RowEvHandlerName="account_tableRowChangeEventHandler" msprop:Generator_TableClassName="account_tableDataTable" msprop:Generator_TableVarName="tableaccount_table" msprop:Generator_RowDeletingName="account_tableRowDeleting" msprop:Generator_TablePropName="account_table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sysid_account" msprop:Generator_UserColumnName="sysid_account" msprop:Generator_ColumnVarNameInTable="columnsysid_account" msprop:Generator_ColumnPropNameInRow="sysid_account" msprop:Generator_ColumnPropNameInTable="sysid_accountColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_code" msprop:Generator_UserColumnName="account_code" msprop:Generator_ColumnVarNameInTable="columnaccount_code" msprop:Generator_ColumnPropNameInRow="account_code" msprop:Generator_ColumnPropNameInTable="account_codeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_name" msprop:Generator_UserColumnName="account_name" msprop:Generator_ColumnVarNameInTable="columnaccount_name" msprop:Generator_ColumnPropNameInRow="account_name" msprop:Generator_ColumnPropNameInTable="account_nameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,268 @@
+CACHED DATA
+
+	==> instantiate from RemCntScholarshipManager
+	call the function GetDataSetForScholarship(CommonExchange.SysAccess userInfo, String serverDateTime)
+
+	this will return a DATASET which contains the following table:
+	
+	Table Name: SchoolFeeInformationTable
+
+				sysid_schoolfee					String		'SYSSCF***'
+            	year_id 						String		'SY********'
+            	year_description				String
+            	date_start						String
+            	date_end						String
+				is_summer						Boolean
+				
+	Table Name: SemesterInformationTable
+
+            	sysid_semester					String		'SYSSEM****'
+            	year_id							String 		'SY********'
+				semester_id						Byte
+           		date_start						String
+            	date_end						String
+            	year_description				String
+            	semester_description			String
+            	
+	Table Name: CourseGroupTable
+
+				course_group_id					String		'CG**'
+				group_no						Byte		'1, 2, 3, 4, 5...'
+				group_description				String
+				is_semestral					Boolean
+				is_per_unit						Boolean
+				
+	Table Name: DepartmentInformationTable
+
+				department_id					String
+				department_name					String
+				acronym							String
+				
+	Table Name: ScholarshipInformationTable
+
+				sysid_scholarship				String		'SYSSPI***'
+				course_group_id					String		'CG**'
+				department_id					String
+				scholarship_description			String
+				is_non_academic					Boolean
+				group_description				String
+				department_name					String
+				department_acronym				String
+				
+	Table Name: YearLevelInformationTable
+
+				year_level_id					String		'YRLV**'
+				year_level_description			String
+				acronym							String
+				id_prefix						String
+				year_level_no					Int16
+				course_group_id					String		'CG**'
+				group_no						Byte		'1, 2, 3, 4, 5...'
+				group_description				String
+				is_semestral					Boolean
+				is_per_unit						Boolean
+				
+TO QUERY A STUDENT SCHOLARSHIP INFORMATION BY QUERY STRING, DATE START, DATE END, SCHOLARSHIPSYSID LIST, DEPARTMENTID LIST
+
+	==> instantiate from RemCntScholarshipManager
+	call the function DataTable SelectStudentScholarship(CommonExchange.SysAccess userInfo, String queryString, String dateStart, String dateEnd,
+            String scholarshipSysIdList, String departmentIdList, String yearLevelIdList)
+
+	Parameter requirements:
+
+		If the query needs only the student id, card number, last name, first name, regardless of the scholarship or
+		department or year level:
+
+		queryString - the string criteria that is to be searched (input * for all student)
+		dateStart - String.Empty
+		dateEnd - String.Empty
+		scholarshipSysIdList - String.Empty
+		departmentIdList - String.Empty
+		yearLevelIdList	- String.Empty
+		
+		If the query needs the student id, card number, last name, first name, with enrolment year or semester,
+		regardless of the scholarship or department or year level:
+
+		queryString - the string criteria that is to be searched (input * for all student)
+		dateStart - Date start of the year or the semester
+		dateEnd - Date start of the year or the semester
+		scholarshipSysIdList - String.Empty
+		departmentIdList - String.Empty		
+		yearLevelIdList	- String.Empty
+
+		If the query needs the student id, card number, last name, first name, with enrolment year or semester,
+		scholarship, regardless of department or year level:
+
+		queryString - the string criteria that is to be searched (input * for all student)
+		dateStart - Date start of the year or the semester
+		dateEnd - Date start of the year or the semester
+		scholarshipSysIdList - 'SYSSPI001', 'SYSSPI021', 'SYSSPI004'
+		departmentIdList - String.Empty	
+		yearLevelIdList	- String.Empty
+
+		If the query needs the student id, card number, last name, first name, level section with enrolment year or semester,
+		scholarship, and department, regardless of year level:
+
+		queryString - the string criteria that is to be searched (input * for all student)
+		dateStart - Date start of the year or the semester
+		dateEnd - Date start of the year or the semester
+		scholarshipSysIdList - 'SYSSPI001', 'SYSSPI021', 'SYSSPI004'
+		departmentIdList - 'DEPT002', 'DEPT003', 'DEPT006'		
+		yearLevelIdList	- String.Empty
+		
+		If the query needs the student id, card number, last name, first name, level section with enrolment year or semester,
+		scholarship, and department, year level:
+
+		queryString - the string criteria that is to be searched (input * for all student)
+		dateStart - Date start of the year or the semester
+		dateEnd - Date start of the year or the semester
+		scholarshipSysIdList - 'SYSSPI001', 'SYSSPI021', 'SYSSPI004'
+		departmentIdList - 'DEPT002', 'DEPT003', 'DEPT006'		
+		yearLevelIdList	- 'YRLV03', 'YRLV07', 'YRL03'
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_studentscholarship					String		'SYSSSC*********'
+				sysid_student								String		'SYSSTD*******'
+				sysid_scholarship							String		'SYSSPI***'
+				sysid_enrolmentlevel						String		'SYSELV*********'				
+				student_id									String
+				card_number									String
+				last_name									String
+				first_name									String
+				middle_name									String
+				is_international							Boolean
+				present_address								String
+				present_phone_nos							String
+				home_address								String
+				home_phone_nos								String
+				father_name									String
+				father_address								String
+				father_phone_nos							String
+				father_life_status_string					String
+				mother_name									String
+				mother_address								String
+				mother_phone_nos							String
+				mother_life_status_string					String
+				guardian_name								String
+				guardian_address							String
+				guardian_phone_nos							String				
+				scholarship_description						String
+				is_non_academic								Boolean
+				department_name								String
+				department_acronym							String
+				course_title								String
+				course_acronym								String
+				year_level_description						String
+				year_description							String
+				semester_description						String			
+
+TO GET THE STUDENT SCHOLARSHIP WITH DISCOUNTS (USED FOR THE FINANCE CASHIERING AND SCHOLARSHIP MANAGER)
+
+	==> instantiate from RemCntScholarshipManager
+	call the function SelectBySysIDEnrolmentLevelStudentScholarship(CommonExchange.SysAccess userInfo, String enrolmentLevelSysId, String serverDateTime)
+            
+	this will return a DATATABLE which contains the following field:
+
+				sysid_studentscholarship					String		'SYSSSC*********'
+				sysid_student								String		'SYSSTD*********'
+				sysid_scholarship							String		'SYSSPI***'
+				scholarship_description						String
+				is_non_academic								Boolean
+				department_name								String
+				department_acronym							String
+				discount_id									Int64
+				discount_date								String
+				remarks										String
+				amount										String
+				
+TO DETERMINE IF THE SCHOLARSHIP DESCRIPTION ALREADY EXISTS (FOR CREATION OF THE SCHOLARSHIP INFORMATION)
+
+	==> instantiate from RemCntScholarshipManager
+	call the function IsExistsScholarshipDescriptionScholarshipInformation(CommonExchange.SysAccess userInfo,
+            CommonExchange.ScholarshipInformation scholarshipInfo)
+
+	this will need the following CommonExchange.ScholarshipInformation struct value:
+
+				scholarshipInfo.ScholarshipSysId
+                scholarshipInfo.CourseGroupId
+                scholarshipInfo.DepartmentId
+                scholarshipInfo.ScholarshipDescription
+                
+	this will return a BOOLEAN value
+
+TO DETERMINE IF THE STUDENT SCHOLARSHIP ALREADY EXISTS (FOR CREATION OF THE STUDENT SCHOLARSHIP)
+
+	==> instantiate from RemCntScholarshipManager
+	call the function IsExistsSysIDStudentScholarshipEnrolmentLevelStudentScholarship(CommonExchange.SysAccess userInfo,
+            CommonExchange.StudentScholarship studentScholarship)
+
+	this will need the following CommonExchange.StudentScholarship struct value:
+
+				studentScholarship.StudentScholarshipSysId
+                studentScholarship.StudentSysId
+                studentScholarship.ScholarshipSysId
+                studentScholarship.EnrolmentLevelSysId
+                
+	this will return a BOOLEAN value
+	
+TO INSERT A SCHOLARSHIP INFORMATION
+
+	==> instantiate from RemCntScholarshipManager
+	call the function InsertScholarshipInformation(CommonExchange.SysAccess userInfo, ref CommonExchange.ScholarshipInformation scholarshipInfo)
+
+	this will need the following CommonExchange.ScholarshipInformation struct value:
+
+				scholarshipInfo.ScholarshipSysId
+                scholarshipInfo.CourseGroupId
+                scholarshipInfo.DepartmentId
+                scholarshipInfo.ScholarshipDescription
+                scholarshipInfo.IsNonAcademic
+                
+TO UPDATE A SCHOLARSHIP INFORMATION
+
+	==> instantiate from RemCntScholarshipManager
+	call the function UpdateScholarshipInformation(CommonExchange.SysAccess userInfo, CommonExchange.ScholarshipInformation scholarshipInfo)
+
+	this will need the following CommonExchange.ScholarshipInformation struct value:
+
+				scholarshipInfo.ScholarshipSysId
+                scholarshipInfo.DepartmentId
+                scholarshipInfo.ScholarshipDescription
+                scholarshipInfo.IsNonAcademic
+                
+TO INSERT A STUDENT SCHOLARSHIP
+
+	==> instantiate from RemCntScholarshipManager
+	call the function InsertStudentScholarship(CommonExchange.SysAccess userInfo, ref CommonExchange.StudentScholarship studentScholarship)
+
+	this will need the following CommonExchange.StudentScholarship struct value:
+
+				studentScholarship.StudentScholarshipSysId
+                studentScholarship.StudentSysId
+                studentScholarship.ScholarshipSysId
+                studentScholarship.EnrolmentLevelSysId
+                
+TO UPDATE A STUDENT SCHOLARSHIP
+
+	==> instantiate from RemCntScholarshipManager
+	call the function UpdateStudentScholarship(CommonExchange.SysAccess userInfo, CommonExchange.StudentScholarship studentScholarship)
+
+	this will need the following CommonExchange.StudentScholarship struct value:
+
+				studentScholarship.StudentScholarshipSysId
+                studentScholarship.ScholarshipSysId
+                
+TO DELETE A STUDENT SCHOLARSHIP
+
+	==> instantiate from RemCntScholarshipManager
+	call the function DeleteStudentScholarship(CommonExchange.SysAccess userInfo, CommonExchange.StudentScholarship studentScholarship)
+
+	this will need the following CommonExchange.StudentScholarship struct value:
+
+				studentScholarship.StudentScholarshipSysId
+	
+BUSINESS RULES
+
+	1. Only the Administrator, VP of Academic Affairs and Secretary of the VP of Academic Affairs can create, update a scholarship information
+	2. Only the Administrator, VP of Academic Affairs and Secretary of the VP of Academic Affairs can create, update, or delete a student scholarship

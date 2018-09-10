@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CashReciptDetailsReport" targetNamespace="http://tempuri.org/CashReciptDetailsReport.xsd" xmlns:mstns="http://tempuri.org/CashReciptDetailsReport.xsd" xmlns="http://tempuri.org/CashReciptDetailsReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CashReciptDetailsReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="CashReciptDetailsReport" msprop:Generator_DataSetName="CashReciptDetailsReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cash_receipt_summarized" msprop:Generator_UserTableName="cash_receipt_summarized" msprop:Generator_RowDeletedName="cash_receipt_summarizedRowDeleted" msprop:Generator_RowChangedName="cash_receipt_summarizedRowChanged" msprop:Generator_RowClassName="cash_receipt_summarizedRow" msprop:Generator_RowChangingName="cash_receipt_summarizedRowChanging" msprop:Generator_RowEvArgName="cash_receipt_summarizedRowChangeEvent" msprop:Generator_RowEvHandlerName="cash_receipt_summarizedRowChangeEventHandler" msprop:Generator_TableClassName="cash_receipt_summarizedDataTable" msprop:Generator_TableVarName="tablecash_receipt_summarized" msprop:Generator_RowDeletingName="cash_receipt_summarizedRowDeleting" msprop:Generator_TablePropName="cash_receipt_summarized">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="group_title" msprop:Generator_UserColumnName="group_title" msprop:Generator_ColumnPropNameInRow="group_title" msprop:Generator_ColumnVarNameInTable="columngroup_title" msprop:Generator_ColumnPropNameInTable="group_titleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_code_summary" msprop:Generator_UserColumnName="account_code_summary" msprop:Generator_ColumnPropNameInRow="account_code_summary" msprop:Generator_ColumnVarNameInTable="columnaccount_code_summary" msprop:Generator_ColumnPropNameInTable="account_code_summaryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_name_summary" msprop:Generator_UserColumnName="account_name_summary" msprop:Generator_ColumnPropNameInRow="account_name_summary" msprop:Generator_ColumnVarNameInTable="columnaccount_name_summary" msprop:Generator_ColumnPropNameInTable="account_name_summaryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="acronym" msprop:Generator_UserColumnName="acronym" msprop:Generator_ColumnPropNameInRow="acronym" msprop:Generator_ColumnVarNameInTable="columnacronym" msprop:Generator_ColumnPropNameInTable="acronymColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_code_subsidiary" msprop:Generator_UserColumnName="account_code_subsidiary" msprop:Generator_ColumnPropNameInRow="account_code_subsidiary" msprop:Generator_ColumnVarNameInTable="columnaccount_code_subsidiary" msprop:Generator_ColumnPropNameInTable="account_code_subsidiaryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_name_subsidiary" msprop:Generator_UserColumnName="account_name_subsidiary" msprop:Generator_ColumnPropNameInRow="account_name_subsidiary" msprop:Generator_ColumnVarNameInTable="columnaccount_name_subsidiary" msprop:Generator_ColumnPropNameInTable="account_name_subsidiaryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="total_amount" msprop:Generator_UserColumnName="total_amount" msprop:Generator_ColumnPropNameInRow="total_amount" msprop:Generator_ColumnVarNameInTable="columntotal_amount" msprop:Generator_ColumnPropNameInTable="total_amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_UserColumnName="total" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInTable="totalColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cash_receipt_details" msprop:Generator_UserTableName="cash_receipt_details" msprop:Generator_RowDeletedName="cash_receipt_detailsRowDeleted" msprop:Generator_RowChangedName="cash_receipt_detailsRowChanged" msprop:Generator_RowClassName="cash_receipt_detailsRow" msprop:Generator_RowChangingName="cash_receipt_detailsRowChanging" msprop:Generator_RowEvArgName="cash_receipt_detailsRowChangeEvent" msprop:Generator_RowEvHandlerName="cash_receipt_detailsRowChangeEventHandler" msprop:Generator_TableClassName="cash_receipt_detailsDataTable" msprop:Generator_TableVarName="tablecash_receipt_details" msprop:Generator_RowDeletingName="cash_receipt_detailsRowDeleting" msprop:Generator_TablePropName="cash_receipt_details">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="receipt_no" msprop:Generator_UserColumnName="receipt_no" msprop:Generator_ColumnVarNameInTable="columnreceipt_no" msprop:Generator_ColumnPropNameInRow="receipt_no" msprop:Generator_ColumnPropNameInTable="receipt_noColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="received_date" msprop:Generator_UserColumnName="received_date" msprop:Generator_ColumnVarNameInTable="columnreceived_date" msprop:Generator_ColumnPropNameInRow="received_date" msprop:Generator_ColumnPropNameInTable="received_dateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="received_from" msprop:Generator_UserColumnName="received_from" msprop:Generator_ColumnVarNameInTable="columnreceived_from" msprop:Generator_ColumnPropNameInRow="received_from" msprop:Generator_ColumnPropNameInTable="received_fromColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="acronym" msprop:Generator_UserColumnName="acronym" msprop:Generator_ColumnVarNameInTable="columnacronym" msprop:Generator_ColumnPropNameInRow="acronym" msprop:Generator_ColumnPropNameInTable="acronymColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_code" msprop:Generator_UserColumnName="account_code" msprop:Generator_ColumnVarNameInTable="columnaccount_code" msprop:Generator_ColumnPropNameInRow="account_code" msprop:Generator_ColumnPropNameInTable="account_codeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_name" msprop:Generator_UserColumnName="account_name" msprop:Generator_ColumnVarNameInTable="columnaccount_name" msprop:Generator_ColumnPropNameInRow="account_name" msprop:Generator_ColumnPropNameInTable="account_nameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_UserColumnName="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_UserColumnName="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="break_down_detals" msprop:Generator_UserTableName="break_down_detals" msprop:Generator_RowDeletedName="break_down_detalsRowDeleted" msprop:Generator_RowChangedName="break_down_detalsRowChanged" msprop:Generator_RowClassName="break_down_detalsRow" msprop:Generator_RowChangingName="break_down_detalsRowChanging" msprop:Generator_RowEvArgName="break_down_detalsRowChangeEvent" msprop:Generator_RowEvHandlerName="break_down_detalsRowChangeEventHandler" msprop:Generator_TableClassName="break_down_detalsDataTable" msprop:Generator_TableVarName="tablebreak_down_detals" msprop:Generator_RowDeletingName="break_down_detalsRowDeleting" msprop:Generator_TablePropName="break_down_detals">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="account_code_summary" msprop:Generator_UserColumnName="account_code_summary" msprop:Generator_ColumnPropNameInRow="account_code_summary" msprop:Generator_ColumnVarNameInTable="columnaccount_code_summary" msprop:Generator_ColumnPropNameInTable="account_code_summaryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_name_summary" msprop:Generator_UserColumnName="account_name_summary" msprop:Generator_ColumnPropNameInRow="account_name_summary" msprop:Generator_ColumnVarNameInTable="columnaccount_name_summary" msprop:Generator_ColumnPropNameInTable="account_name_summaryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_code" msprop:Generator_UserColumnName="account_code" msprop:Generator_ColumnPropNameInRow="account_code" msprop:Generator_ColumnVarNameInTable="columnaccount_code" msprop:Generator_ColumnPropNameInTable="account_codeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_name" msprop:Generator_UserColumnName="account_name" msprop:Generator_ColumnPropNameInRow="account_name" msprop:Generator_ColumnVarNameInTable="columnaccount_name" msprop:Generator_ColumnPropNameInTable="account_nameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_UserColumnName="amount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInTable="amountColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="break_down_summarized" msprop:Generator_UserTableName="break_down_summarized" msprop:Generator_RowDeletedName="break_down_summarizedRowDeleted" msprop:Generator_RowChangedName="break_down_summarizedRowChanged" msprop:Generator_RowClassName="break_down_summarizedRow" msprop:Generator_RowChangingName="break_down_summarizedRowChanging" msprop:Generator_RowEvArgName="break_down_summarizedRowChangeEvent" msprop:Generator_RowEvHandlerName="break_down_summarizedRowChangeEventHandler" msprop:Generator_TableClassName="break_down_summarizedDataTable" msprop:Generator_TableVarName="tablebreak_down_summarized" msprop:Generator_RowDeletingName="break_down_summarizedRowDeleting" msprop:Generator_TablePropName="break_down_summarized">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="account_code_summary" msprop:Generator_UserColumnName="account_code_summary" msprop:Generator_ColumnPropNameInRow="account_code_summary" msprop:Generator_ColumnVarNameInTable="columnaccount_code_summary" msprop:Generator_ColumnPropNameInTable="account_code_summaryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_name_summary" msprop:Generator_UserColumnName="account_name_summary" msprop:Generator_ColumnPropNameInRow="account_name_summary" msprop:Generator_ColumnVarNameInTable="columnaccount_name_summary" msprop:Generator_ColumnPropNameInTable="account_name_summaryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_code_subsidiary" msdata:Caption="account_code" msprop:Generator_UserColumnName="account_code_subsidiary" msprop:Generator_ColumnPropNameInRow="account_code_subsidiary" msprop:Generator_ColumnVarNameInTable="columnaccount_code_subsidiary" msprop:Generator_ColumnPropNameInTable="account_code_subsidiaryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="account_name_subsidiary" msdata:Caption="account_name" msprop:Generator_UserColumnName="account_name_subsidiary" msprop:Generator_ColumnPropNameInRow="account_name_subsidiary" msprop:Generator_ColumnVarNameInTable="columnaccount_name_subsidiary" msprop:Generator_ColumnPropNameInTable="account_name_subsidiaryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="total_amount" msdata:Caption="amount" msprop:Generator_UserColumnName="total_amount" msprop:Generator_ColumnPropNameInRow="total_amount" msprop:Generator_ColumnVarNameInTable="columntotal_amount" msprop:Generator_ColumnPropNameInTable="total_amountColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

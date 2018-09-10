@@ -1,0 +1,206 @@
+TO GET CACHED DATA
+
+	==> instantiate from RemCntAuxiliaryServicesManager
+	call the function GetDataSetForTeacherLoad(CommonExchange.SysAccess userinfo)
+
+	this will return a DATASET which contains the following table:
+
+	Table Name: SchoolYearTable
+
+				year_id 					String
+            	year_description			String
+            	date_start					String
+            	date_end					String
+
+	Table Name: SemesterInformationTable
+
+            	sysid_semester				String
+            	year_id						String
+				semester_id					Byte
+           		date_start					String
+            	date_end					String
+            	year_description			String
+            	semester_description		String
+
+	Table Name: CourseGroupTable
+
+				course_group_id				String
+				group_no					Byte
+				group_description			String
+				is_semestral				Boolean
+				is_per_unit					Boolean
+
+	Table Name: DepartmentInformationTable
+
+				department_id				String
+				department_name				String
+				acronym						String
+
+
+TO GET THE AUXILIARY SERVICE INFORMATION BY QUERY STRING (FOR AUXILIARY SERVICE INFORMATION MODULE)
+
+	==> instantiate from RemCntAuxiliaryServicesManager
+	call the function SelectByServiceCodeTitleAuxiliaryServiceInformation(CommonExchange.SysAccess userInfo, String queryString)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_auxservice			String
+				course_group_id				String
+				department_id				String
+				service_code				String
+				descriptive_title			String
+				lecture_units				Byte
+				lab_units					Byte
+				no_hours					String
+				other_information			String
+				group_no					Byte
+				is_semestral				Boolean
+				department_name				String
+
+
+TO DETERMINE IF THE SERVICE CODE AND DESCRIPTION ALREADY EXISTS (FOR CREATION OF THE AUXILIARY SERVICE INFORMATION)
+
+	==> instantiate from RemCntAuxiliaryServicesManager
+	call the function IsExistCodeDescriptionAuxiliaryServiceInformation(CommonExchange.SysAccess userInfo, CommonExchange.AuxiliaryServiceInformation serviceInfo)
+
+	this will return a BOOLEAN value
+
+
+TO INSERT A NEW AUXILIARY SERVICE INFORMATION (FOR AUXILIARY SERVICE INFORMATION CREATE MODULE)
+
+	==> instantiate from RemCntAuxiliaryServicesManager
+	call the procedue InsertAuxiliaryServiceInformation(CommonExchange.SysAccess userInfo, ref CommonExchange.AuxiliaryServiceInformation serviceInfo)
+
+	this will need the following CommonExchange.AuxiliaryServiceInformation struct value:
+
+				serviceInfo.AuxServiceSysId
+        		serviceInfo.CourseGroupId
+        		serviceInfo.DepartmentId
+        		serviceInfo.ServiceCode
+        		serviceInfo.DescriptiveTitle
+        		serviceInfo.LectureUnits
+        		serviceInfo.LabUnits
+        		serviceInfo.NoHours
+        		serviceInfo.OtherInformation
+
+TO UPDATE AN EXISTING AUXILIARY SERVICE INFORMATION (FOR AUXILIARY SERVICE INFORMATION UPDATE MODULE)
+
+	==> instantiate from RemCntAuxiliaryServicesManager
+	call the procedue UpdateAuxiliaryServiceInformation(CommonExchange.SysAccess userInfo, CommonExchange.AuxiliaryServiceInformation serviceInfo)
+
+	this will need the following CommonExchange.AuxiliaryServiceInformation struct value:
+
+				serviceInfo.AuxServiceSysId
+            	serviceInfo.CourseGroupId
+            	serviceInfo.DepartmentId
+            	serviceInfo.ServiceCode
+            	serviceInfo.DescriptiveTitle
+            	serviceInfo.LectureUnits
+            	serviceInfo.LabUnits
+            	serviceInfo.NoHours
+            	serviceInfo.OtherInformation
+
+TO GET THE AUXILIARY SERVICE DETAILS BY DATE START AND DATE END (FOR AUXILIARY SERVICE MANAGER MODULE)
+
+	==> instantiate from RemCntAuxiliaryServicesManager
+	call the function SelectByDateStartEndAuxiliaryServiceDetails(CommonExchange.SysAccess userInfo, String dateStart, String dateEnd)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_auxdetails			String
+				sysid_auxserviceschedule	String
+				lecture_units_details		Byte
+				lab_units_details			Byte
+				no_hours_details			String
+				is_marked_deleted_details	Boolean
+				service_code				String
+				descriptive_title			String
+				department_id				String
+				lecture_units_schedule		Byte
+				lab_units_schedule			Byte
+				no_hours_schedule			String
+				is_semestral				Boolean
+				sysid_auxservice			String			
+				year_semester_id			String
+				is_marked_deleted_schedule	Boolean
+				is_fixed_amount				Boolean
+				amount						Decimal
+				service_department_name		String
+				sysid_employee				String
+				last_name					String
+				first_name					String
+				middle_name					String
+				type_description			String
+				status_description			String
+				employee_department_name	String
+
+	call this function evertime the user selects a school year
+
+
+TO INSERT A NEW AUXILIARY SERVICE SCHEDULE (FOR AUXILIARY SERVICE SCHEDULE CREATE MODULE)
+
+	==> instantiate from RemCntAuxiliaryServicesManager
+	call the procedue InsertAuxiliaryServiceSchedule(CommonExchange.SysAccess userInfo, ref CommonExchange.AuxiliaryServiceSchedule serviceScheduleInfo)
+
+	this will need the following CommonExchange.AuxiliaryServiceSchedule struct value:
+
+				serviceScheduleInfo.AuxServiceScheduleSysId
+            	serviceScheduleInfo.AuxServiceSysId
+            	serviceScheduleInfo.YearId
+            	serviceScheduleInfo.SemesterSysId
+				serviceScheduleInfo.IsFixedAmount
+				serviceScheduleInfo.Amount
+
+TO DELETE AN AUXILIARY SERVICE SCHEDULE (FOR AUXILIARY SERVICE SCHEDULE UPDATE AND DELETE MODULE)
+
+	==> instantiate from RemCntAuxiliaryServicesManager
+	call the procedue DeleteAuxiliaryServiceSchedule(CommonExchange.SysAccess userInfo, CommonExchange.AuxiliaryServiceSchedule serviceScheduleInfo)
+
+	this will need the following CommonExchange.AuxiliaryServiceSchedule struct value:
+
+				serviceScheduleInfo.AuxServiceScheduleSysId
+
+
+TO INSERT A NEW AUXILIARY SERVICE DETAILS (FOR AUXILIARY SERVICE DETAILS CREATE MODULE)
+
+	==> instantiate from RemCntAuxiliaryServicesManager
+	call the procedue InsertAuxiliaryServiceDetails(CommonExchange.SysAccess userInfo, ref CommonExchange.AuxiliaryServiceDetails serviceDetailsInfo)
+
+	this will need the following CommonExchange.AuxiliaryServiceDetails struct value:
+
+				serviceDetailsInfo.AuxServiceDetailsSysId
+            	serviceDetailsInfo.AuxServiceScheduleSysId
+            	serviceDetailsInfo.LectureUnits
+            	serviceDetailsInfo.LabUnits
+            	serviceDetailsInfo.NoHours
+
+
+TO UPDATE AN AUXILIARY SERVICE DETAILS (FOR AUXILIARY SERVICE DETAILS UPDATE AND DELETE MODULE)
+
+	==> instantiate from RemCntAuxiliaryServicesManager
+	call the procedue UpdateAuxiliaryServiceDetails(CommonExchange.SysAccess userInfo, CommonExchange.AuxiliaryServiceDetails serviceDetailsInfo)
+
+	this will need the following CommonExchange.AuxiliaryServiceDetails struct value:
+
+				serviceDetailsInfo.AuxServiceDetailsSysId
+            	serviceDetailsInfo.LectureUnits
+            	serviceDetailsInfo.LabUnits
+            	serviceDetailsInfo.NoHours
+
+
+TO DELETE AN AUXILIARY SERVICE DETAILS (FOR AUXILIARY SERVICE DETAILS UPDATE AND DELETE MODULE)
+
+	==> instantiate from RemCntAuxiliaryServicesManager
+	call the procedue DeleteAuxiliaryServiceDetails(CommonExchange.SysAccess userInfo, CommonExchange.AuxiliaryServiceDetails serviceDetailsInfo)
+
+	this will need the following CommonExchange.AuxiliaryServiceDetails struct value:
+
+				serviceDetailsInfo.AuxServiceDetailsSysId
+
+
+
+BUSINESS RULES
+
+	1. The secretary of the president is the one who is going to define, schedule and load the auxiliary service
+	2. If the secretary of the president will assign another department on the definition of the service, the 
+		office secretary which belong to the same department assign can now load the auxiliary service

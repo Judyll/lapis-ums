@@ -1,0 +1,9 @@
+ 	
+	
+
+------------- CURRENT CHARGE LEGEND ------------- 
+
+	Level Increase	---> Orange
+	Added Level Fee ---> Olive
+	Additional Fee	---> Brown
+	Optional Fee	---> Cadet Blue

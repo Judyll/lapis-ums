@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TranscriptDateSet" targetNamespace="http://tempuri.org/TranscriptDateSet.xsd" xmlns:mstns="http://tempuri.org/TranscriptDateSet.xsd" xmlns="http://tempuri.org/TranscriptDateSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TranscriptDateSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TranscriptDateSet" msprop:Generator_DataSetName="TranscriptDateSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="transcript_details_table" msprop:Generator_UserTableName="transcript_details_table" msprop:Generator_RowDeletedName="transcript_details_tableRowDeleted" msprop:Generator_RowChangedName="transcript_details_tableRowChanged" msprop:Generator_RowClassName="transcript_details_tableRow" msprop:Generator_RowChangingName="transcript_details_tableRowChanging" msprop:Generator_RowEvArgName="transcript_details_tableRowChangeEvent" msprop:Generator_RowEvHandlerName="transcript_details_tableRowChangeEventHandler" msprop:Generator_TableClassName="transcript_details_tableDataTable" msprop:Generator_TableVarName="tabletranscript_details_table" msprop:Generator_RowDeletingName="transcript_details_tableRowDeleting" msprop:Generator_TablePropName="transcript_details_table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="term_session" msprop:Generator_UserColumnName="term_session" msprop:Generator_ColumnVarNameInTable="columnterm_session" msprop:Generator_ColumnPropNameInRow="term_session" msprop:Generator_ColumnPropNameInTable="term_sessionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="subject_code" msprop:Generator_UserColumnName="subject_code" msprop:Generator_ColumnVarNameInTable="columnsubject_code" msprop:Generator_ColumnPropNameInRow="subject_code" msprop:Generator_ColumnPropNameInTable="subject_codeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="subject_no" msprop:Generator_UserColumnName="subject_no" msprop:Generator_ColumnVarNameInTable="columnsubject_no" msprop:Generator_ColumnPropNameInRow="subject_no" msprop:Generator_ColumnPropNameInTable="subject_noColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="descriptive_title" msprop:Generator_UserColumnName="descriptive_title" msprop:Generator_ColumnVarNameInTable="columndescriptive_title" msprop:Generator_ColumnPropNameInRow="descriptive_title" msprop:Generator_ColumnPropNameInTable="descriptive_titleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="credit_units" msprop:Generator_UserColumnName="credit_units" msprop:Generator_ColumnVarNameInTable="columncredit_units" msprop:Generator_ColumnPropNameInRow="credit_units" msprop:Generator_ColumnPropNameInTable="credit_unitsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="final_grade" msprop:Generator_UserColumnName="final_grade" msprop:Generator_ColumnVarNameInTable="columnfinal_grade" msprop:Generator_ColumnPropNameInRow="final_grade" msprop:Generator_ColumnPropNameInTable="final_gradeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="re_exam" msprop:Generator_UserColumnName="re_exam" msprop:Generator_ColumnVarNameInTable="columnre_exam" msprop:Generator_ColumnPropNameInRow="re_exam" msprop:Generator_ColumnPropNameInTable="re_examColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="no_of_hours" msprop:Generator_UserColumnName="no_of_hours" msprop:Generator_ColumnVarNameInTable="columnno_of_hours" msprop:Generator_ColumnPropNameInRow="no_of_hours" msprop:Generator_ColumnPropNameInTable="no_of_hoursColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="student_image_table" msprop:Generator_UserTableName="student_image_table" msprop:Generator_RowDeletedName="student_image_tableRowDeleted" msprop:Generator_RowChangedName="student_image_tableRowChanged" msprop:Generator_RowClassName="student_image_tableRow" msprop:Generator_RowChangingName="student_image_tableRowChanging" msprop:Generator_RowEvArgName="student_image_tableRowChangeEvent" msprop:Generator_RowEvHandlerName="student_image_tableRowChangeEventHandler" msprop:Generator_TableClassName="student_image_tableDataTable" msprop:Generator_TableVarName="tablestudent_image_table" msprop:Generator_RowDeletingName="student_image_tableRowDeleting" msprop:Generator_TablePropName="student_image_table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="image" msprop:Generator_UserColumnName="image" msprop:Generator_ColumnVarNameInTable="columnimage" msprop:Generator_ColumnPropNameInRow="image" msprop:Generator_ColumnPropNameInTable="imageColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="is_null" msprop:Generator_UserColumnName="is_null" msprop:Generator_ColumnPropNameInRow="is_null" msprop:Generator_ColumnVarNameInTable="columnis_null" msprop:Generator_ColumnPropNameInTable="is_nullColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,13 @@
+
+BUSINESS RULES
+
+	SUBJECT
+		1. The subject must be unique in subject code, descriptive title and department.
+
+	SPECIAL CLASS
+
+		1. Only the VP of Academic Affairs, College and High School Registrar can create a special class
+		2. Only the Payroll Master can update the special class amount
+		3. Only the Payroll Master can delete the special class
+		4. Only the VP of Academic Affairs, College and High School Registrar can load the student with the special class
+		5. Only the Payroll Master can deload the student with the special class

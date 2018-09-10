@@ -1,0 +1,135 @@
+CACHED DATA
+
+	==> instantiate from RemCntMajorExamScheduleManager
+	call the function GetDataSetForMajorExamSchedule(CommonExchange.SysAccess userInfo, String serverDateTime)
+
+	this will return a DATASET which contains the following table:
+	
+	Table Name: SchoolYearTable
+
+				year_id 						String
+            	year_description				String
+            	date_start						String
+            	date_end						String
+				is_summer						Boolean
+
+	Table Name: SemesterInformationTable
+
+            	sysid_semester					String		'SYSSEM****'
+            	year_id							String 		'SY********'
+				semester_id						Byte
+           		date_start						String
+            	date_end						String
+            	year_description				String
+            	semester_description			String
+            	
+	Table Name: MajorExamInformationTable
+
+            	exam_information_id				String		'EXAM**'
+            	course_group_id					String
+				exam_description				String
+           		group_no						Byte
+            	group_description				String
+            	is_semestral					Boolean
+            	
+	Table Name: CourseGroupTable
+
+				course_group_id					String		'CG**'
+				group_no						Byte
+				group_description				String
+				is_semestral					Boolean
+				is_per_unit						Boolean
+				
+TO QUERY A MAJOR EXAM SCHEDULE DATE START, DATE END, COURSE GROUP ID LIST, EXAM INFORMATION ID LIST
+
+	==> instantiate from RemCntMajorExamScheduleManager
+	call the function SelectMajorExamSchedule(CommonExchange.SysAccess userInfo, String dateStart, String dateEnd,
+            String courseGroupIdList, String examInformationIdList, String serverDateTime)
+
+	Parameter requirements:
+
+		If the query needs only the date start and date end, regardless of the course group or
+		exam information:
+
+		dateStart - Date start of the year or the semester
+		dateEnd - Date start of the year or the semester
+		courseGroupIdList - String.Empty
+		examInformationIdList - String.Empty
+		
+		If the query needs only the date start and date end, course group, regardless of the 
+		exam information:
+
+		dateStart - Date start of the year or the semester
+		dateEnd - Date start of the year or the semester
+		courseGroupIdList - 'CG01', 'CG03', 'CG04'
+		examInformationIdList - String.Empty
+
+		If the query needs the date start and date end, course group, and 
+		exam information:
+
+		dateStart - Date start of the year or the semester
+		dateEnd - Date start of the year or the semester
+		courseGroupIdList - 'CG01', 'CG03', 'CG04'
+		examInformationIdList - 'EXAM01', 'EXAM07', 'EXAM08'
+
+	this will return a DATATABLE which contains the following field:
+	
+				major_exam_id								Int64
+				year_semester_id							String
+				exam_information_id							String		'EXAM**'
+				exam_date									String
+				exam_description							String
+				course_group_id								String		'CG**'
+				group_description							String
+				group_no									Byte
+				is_semestral								Boolean
+				
+TO DETERMINE IF THE EXAM SCHEDULE ALREADY EXISTS (FOR CREATION OF THE MAJOR EXAM SCHEDULE)
+
+	==> instantiate from RemCntMajorExamScheduleManager
+	call the function IsExistsYearSemesterIDExamDateInformationIDExamSchedule(CommonExchange.SysAccess userInfo, 
+            CommonExchange.MajorExamSchedule examSchedule)
+
+	this will need the following CommonExchange.MajorExamSchedule struct value:
+
+				examSchedule.MajorExamId
+                examSchedule.YearId
+                examSchedule.SemesterSysId
+                examSchedule.ExamInformationId
+                examSchedule.ExamDate
+                
+	this will return a BOOLEAN value
+
+TO INSERT A MAJOR EXAM SCHEDULE
+
+	==> instantiate from RemCntMajorExamScheduleManager
+	call the function InsertMajorExamSchedule(CommonExchange.SysAccess userInfo, CommonExchange.MajorExamSchedule examSchedule)
+
+	this will need the following CommonExchange.MajorExamSchedule struct value:
+
+				examSchedule.YearId
+                examSchedule.SemesterSysId
+                examSchedule.ExamInformationId
+                examSchedule.ExamDate
+
+TO UPDATE A MAJOR EXAM SCHEDULE
+
+	==> instantiate from RemCntMajorExamScheduleManager
+	call the function UpdateMajorExamSchedule(CommonExchange.SysAccess userInfo, CommonExchange.MajorExamSchedule examSchedule)
+
+	this will need the following CommonExchange.MajorExamSchedule struct value:
+
+				examSchedule.MajorExamId
+                examSchedule.YearId
+                examSchedule.SemesterSysId
+                examSchedule.ExamInformationId
+                examSchedule.ExamDate
+                
+TO DELETE A MAJOR EXAM SCHEDULE
+
+	==> instantiate from RemCntMajorExamScheduleManager
+	call the function DeleteMajorExamSchedule(CommonExchange.SysAccess userInfo, CommonExchange.MajorExamSchedule examSchedule)
+
+	this will need the following CommonExchange.MajorExamSchedule struct value:
+
+				examSchedule.MajorExamId

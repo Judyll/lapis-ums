@@ -1,0 +1,153 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD047A50-81E5-4B2A-AFDA-F868C781A3B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CampusAccessServices</RootNamespace>
+    <AssemblyName>cpas</AssemblyName>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="rclnt, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Server Solutions\Server DLL\rclnt.dll</HintPath>
+    </Reference>
+    <Reference Include="rslib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Server Solutions\Server DLL\rslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassCapusAccessServices\BaseClass\CampusAccessLogic.cs" />
+    <Compile Include="ClassCapusAccessServices\BaseForm\AccessPointInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCapusAccessServices\BaseForm\AccessPointInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCapusAccessServices\BaseForm\AccessPointInformation.Designer.cs">
+      <DependentUpon>AccessPointInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCapusAccessServices\BaseForm\CampusAccessManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCapusAccessServices\BaseForm\CampusAccessManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCapusAccessServices\BaseForm\CampusAccessManager.Designer.cs">
+      <DependentUpon>CampusAccessManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCapusAccessServices\BaseForm\UpdatingForm.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCapusAccessServices\BaseForm\UpdatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCapusAccessServices\BaseForm\UpdatingForm.Designer.cs">
+      <DependentUpon>UpdatingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassLogInManager\SystemLogIn.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassLogInManager\SystemLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassLogInManager\SystemLogIn.Designer.cs">
+      <DependentUpon>SystemLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassCapusAccessServices\BaseForm\AccessPointInformation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AccessPointInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCapusAccessServices\BaseForm\CampusAccessManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CampusAccessManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCapusAccessServices\BaseForm\UpdatingForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UpdatingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassLogInManager\SystemLogIn.resx">
+      <DependentUpon>SystemLogIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secrecy-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol-Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,639 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4854A105-A5D0-46E1-9720-B5D31C7A28AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RegistrarServices</RootNamespace>
+    <AssemblyName>rgsvc</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="bssvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Base Solution\BaseServices\BaseServices\bin\Release\bssvc.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="ofsvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Office Solutions\Solutions\OfficeServices\OfficeServices\bin\Release\ofsvc.dll</HintPath>
+    </Reference>
+    <Reference Include="rclnt, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Server Solutions\Server DLL\rclnt.dll</HintPath>
+    </Reference>
+    <Reference Include="rslib, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Server Solutions\Server DLL\rslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassCourseManager\BaseClass\CourseLogic.cs" />
+    <Compile Include="ClassCourseManager\BaseForm\Classroom.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\Classroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\Classroom.Designer.cs">
+      <DependentUpon>Classroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\Course.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\Course.Designer.cs">
+      <DependentUpon>Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\CourseManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\CourseManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\CourseManager.Designer.cs">
+      <DependentUpon>CourseManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\OtherInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\OtherInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\OtherInformation.designer.cs">
+      <DependentUpon>OtherInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\SearchOnTextboxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\SearchOnTextboxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\SearchOnTextboxList.Designer.cs">
+      <DependentUpon>SearchOnTextboxList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\Subject.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\Subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\BaseForm\Subject.Designer.cs">
+      <DependentUpon>Subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\ClassroomCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\ClassroomCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\ClassroomSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\ClassroomSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\ClassroomUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\ClassroomUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\CourseCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\CourseCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\CourseSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\CourseSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\CourseUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\CourseUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\PrerequisiteSearchOnTextboxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\PrerequisiteSearchOnTextboxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\SubjectSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\SubjectSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\SubjectSearchList.Designer.cs">
+      <DependentUpon>SubjectSearchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\SubjectCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\SubjectCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\SubjectUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCourseManager\DerivedForm\SubjectUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\BaseClass\MajorExamScheduleLogic.cs" />
+    <Compile Include="ClassMajorExamScheduleManager\BaseForm\MajorExamSchedule.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\BaseForm\MajorExamSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\BaseForm\MajorExamSchedule.Designer.cs">
+      <DependentUpon>MajorExamSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\BaseForm\MajorExamScheduleManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\BaseForm\MajorExamScheduleManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\BaseForm\MajorExamScheduleManager.Designer.cs">
+      <DependentUpon>MajorExamScheduleManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\DerivedForm\MajorExamScheduleCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\DerivedForm\MajorExamScheduleCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\DerivedForm\MajorExamScheduleSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\DerivedForm\MajorExamScheduleSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\DerivedForm\MajorExamScheduleUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassMajorExamScheduleManager\DerivedForm\MajorExamScheduleUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseClass\SchoolYearLogic.cs" />
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\SchoolYear.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\SchoolYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\SchoolYear.Designer.cs">
+      <DependentUpon>SchoolYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\SchoolYearSemesterManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\SchoolYearSemesterManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\SchoolYearSemesterManager.Designer.cs">
+      <DependentUpon>SchoolYearSemesterManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\SearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\SearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\SearchList.Designer.cs">
+      <DependentUpon>SearchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\Semester.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\Semester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\BaseForm\Semester.designer.cs">
+      <DependentUpon>Semester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\DerivedForm\SchoolYearOpen.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\DerivedForm\SchoolYearOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\DerivedForm\SchoolYearSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\DerivedForm\SchoolYearSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\DerivedForm\SchoolYearView.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\DerivedForm\SchoolYearView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\DerivedForm\SemesterSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\DerivedForm\SemesterSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\DerivedForm\SemesterView.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSchoolYearSemesterManager\DerivedForm\SemesterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\BaseClass\SpecialClassLogic.cs" />
+    <Compile Include="ClassSpecialClassManager\BaseForm\SpecialClass.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\BaseForm\SpecialClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\BaseForm\SpecialClass.Designer.cs">
+      <DependentUpon>SpecialClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\BaseForm\SpecialClassManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\BaseForm\SpecialClassManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\BaseForm\SpecialClassManager.Designer.cs">
+      <DependentUpon>SpecialClassManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\EmployeeSearchOnTextboxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\EmployeeSearchOnTextboxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\SpecialClassCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\SpecialClassCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\SpecialClassSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\SpecialClassSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\SpecialClassUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\SpecialClassUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\StudentSearchOnTextboxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\StudentSearchOnTextboxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\SubjectSearchOnTextboxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSpecialClassManager\DerivedForm\SubjectSearchOnTextboxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\BaseClass\TranscriptLogic.cs" />
+    <Compile Include="ClassTranscriptManager\BaseForm\SearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\BaseForm\SearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\BaseForm\SearchList.Designer.cs">
+      <DependentUpon>SearchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\BaseForm\TranscriptInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\BaseForm\TranscriptInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\BaseForm\TranscriptInformation.Designer.cs">
+      <DependentUpon>TranscriptInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\BaseForm\TranscriptManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\BaseForm\TranscriptManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\BaseForm\TranscriptManager.Designer.cs">
+      <DependentUpon>TranscriptManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\CrystalReport\CrystalStudentTranscript.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalStudentTranscript.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\DataSet\TranscriptDateSet.cs">
+      <DependentUpon>TranscriptDateSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\DataSet\TranscriptDateSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TranscriptDateSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\DerivedForm\TranscriptSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTranscriptManager\DerivedForm\TranscriptSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassCourseManager\BaseForm\Classroom.resx">
+      <DependentUpon>Classroom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\BaseForm\Course.resx">
+      <DependentUpon>Course.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\BaseForm\CourseManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CourseManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\BaseForm\OtherInformation.resx">
+      <DependentUpon>OtherInformation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\BaseForm\SearchOnTextboxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchOnTextboxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\BaseForm\Subject.resx">
+      <DependentUpon>Subject.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\DerivedForm\ClassroomCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ClassroomCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\DerivedForm\ClassroomSearchList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ClassroomSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\DerivedForm\ClassroomUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ClassroomUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\DerivedForm\CourseCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CourseCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\DerivedForm\CourseSearchList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CourseSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\DerivedForm\CourseUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CourseUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\DerivedForm\PrerequisiteSearchOnTextboxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrerequisiteSearchOnTextboxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\DerivedForm\SubjectSearchList.resx">
+      <DependentUpon>SubjectSearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\DerivedForm\SubjectCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SubjectCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCourseManager\DerivedForm\SubjectUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SubjectUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMajorExamScheduleManager\BaseForm\MajorExamSchedule.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MajorExamSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMajorExamScheduleManager\BaseForm\MajorExamScheduleManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MajorExamScheduleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMajorExamScheduleManager\DerivedForm\MajorExamScheduleCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MajorExamScheduleCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMajorExamScheduleManager\DerivedForm\MajorExamScheduleSearchList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MajorExamScheduleSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassMajorExamScheduleManager\DerivedForm\MajorExamScheduleUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MajorExamScheduleUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolYearSemesterManager\BaseForm\SchoolYear.resx">
+      <DependentUpon>SchoolYear.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolYearSemesterManager\BaseForm\SchoolYearSemesterManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolYearSemesterManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolYearSemesterManager\BaseForm\SearchList.resx">
+      <DependentUpon>SearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolYearSemesterManager\BaseForm\Semester.resx">
+      <DependentUpon>Semester.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolYearSemesterManager\DerivedForm\SchoolYearOpen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolYearOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolYearSemesterManager\DerivedForm\SchoolYearSearchList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolYearSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolYearSemesterManager\DerivedForm\SchoolYearView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SchoolYearView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolYearSemesterManager\DerivedForm\SemesterSearchList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SemesterSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSchoolYearSemesterManager\DerivedForm\SemesterView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SemesterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSpecialClassManager\BaseForm\SpecialClass.resx">
+      <DependentUpon>SpecialClass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSpecialClassManager\BaseForm\SpecialClassManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SpecialClassManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSpecialClassManager\DerivedForm\EmployeeSearchOnTextboxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EmployeeSearchOnTextboxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSpecialClassManager\DerivedForm\SpecialClassCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SpecialClassCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSpecialClassManager\DerivedForm\SpecialClassSearchList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SpecialClassSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSpecialClassManager\DerivedForm\SpecialClassUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SpecialClassUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSpecialClassManager\DerivedForm\StudentSearchOnTextboxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StudentSearchOnTextboxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSpecialClassManager\DerivedForm\SubjectSearchOnTextboxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SubjectSearchOnTextboxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTranscriptManager\BaseForm\SearchList.resx">
+      <DependentUpon>SearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTranscriptManager\BaseForm\TranscriptInformation.resx">
+      <DependentUpon>TranscriptInformation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTranscriptManager\BaseForm\TranscriptManager.resx">
+      <DependentUpon>TranscriptManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTranscriptManager\CrystalReport\CrystalStudentTranscript.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentTranscript.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTranscriptManager\DerivedForm\TranscriptSearchList.resx">
+      <DependentUpon>TranscriptSearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZTemporary\TempNavigator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TempNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassTranscriptManager\DataSet\TranscriptDateSet.xsc">
+      <DependentUpon>TranscriptDateSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassTranscriptManager\DataSet\TranscriptDateSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TranscriptDateSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassTranscriptManager\DataSet\TranscriptDateSet.xss">
+      <DependentUpon>TranscriptDateSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ZTemporary\TempNavigator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZTemporary\TempNavigator.Designer.cs">
+      <DependentUpon>TempNavigator.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

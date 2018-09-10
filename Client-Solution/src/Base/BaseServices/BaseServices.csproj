@@ -1,0 +1,223 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FDD1D08C-7003-4710-B5CE-92D808B5D1E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseServices</RootNamespace>
+    <AssemblyName>bssvc</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="rclnt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Server Solutions\Server DLL\rclnt.dll</HintPath>
+    </Reference>
+    <Reference Include="rslib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Server Solutions\Server DLL\rslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XPPanel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c1a4c9eadd4711d4">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ZTesting\XP Panel DLL\XPPanel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassBaseServices\BaseClass\BaseServicesLogic.cs" />
+    <Compile Include="ClassBaseServices\BaseForm\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\PersonInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\PersonInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\PersonInformation.Designer.cs">
+      <DependentUpon>PersonInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\PersonRelationship.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\PersonRelationship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\PersonRelationship.Designer.cs">
+      <DependentUpon>PersonRelationship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\SearchOnTextboxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\SearchOnTextboxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\SearchOnTextboxList.Designer.cs">
+      <DependentUpon>SearchOnTextboxList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\SubjectLegend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\SubjectLegend.Designer.cs">
+      <DependentUpon>SubjectLegend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\VerifyPersonExistenceList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\VerifyPersonExistenceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\BaseForm\VerifyPersonExistenceList.Designer.cs">
+      <DependentUpon>VerifyPersonExistenceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonalInformationWithRelationship.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonalInformationWithRelationship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonInformationCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonInformationCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonInformationCreateUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonInformationCreateUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonRelationshipCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonRelationshipCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonRelationshipUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonRelationshipUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassBaseServices\DerivedForm\PersonSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassBaseServices\BaseForm\Loading.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassBaseServices\BaseForm\PersonInformation.resx">
+      <DependentUpon>PersonInformation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassBaseServices\BaseForm\PersonRelationship.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PersonRelationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassBaseServices\BaseForm\SearchOnTextboxList.resx">
+      <DependentUpon>SearchOnTextboxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassBaseServices\BaseForm\SubjectLegend.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SubjectLegend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassBaseServices\BaseForm\VerifyPersonExistenceList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VerifyPersonExistenceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassBaseServices\DerivedForm\PersonalInformationWithRelationship.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PersonalInformationWithRelationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassBaseServices\DerivedForm\PersonInformationCreate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PersonInformationCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassBaseServices\DerivedForm\PersonInformationCreateUpdate.resx">
+      <DependentUpon>PersonInformationCreateUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassBaseServices\DerivedForm\PersonRelationshipCreate.resx">
+      <DependentUpon>PersonRelationshipCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassBaseServices\DerivedForm\PersonRelationshipUpdate.resx">
+      <DependentUpon>PersonRelationshipUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassBaseServices\DerivedForm\PersonSearchOnTextBoxList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PersonSearchOnTextBoxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

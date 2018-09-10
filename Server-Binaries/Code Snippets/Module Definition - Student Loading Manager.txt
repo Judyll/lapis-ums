@@ -1,0 +1,523 @@
+CACHED DATA
+
+	==> instantiate from RemCntStudentLoadingManager
+	call the function GetDataSetForStudentLoad(CommonExchange.SysAccess userInfo, String serverDateTime)
+
+	this will return a DATASET which contains the following table:
+
+	Table Name: SchoolFeeInformationTable
+
+				sysid_schoolfee					String		'SYSSCF***'
+            	year_id 						String		'SY********'
+            	year_description				String
+            	date_start						String
+            	date_end						String
+				is_summer						Boolean
+
+	Table Name: SemesterInformationTable
+
+            	sysid_semester					String		'SYSSEM****'
+            	year_id							String 		'SY********'
+				semester_id						Byte
+           		date_start						String
+            	date_end						String
+            	year_description				String
+            	semester_description			String
+
+	Table Name: CourseInformationTable
+
+				course_id 						String		'CRSE**'
+            	course_group_id					String		'CG**'
+            	department_id					String		'DEPT***'
+            	course_title					String
+				course_acronym					String
+				group_no						Byte
+				is_semestral					Boolean
+				is_per_unit						Boolean
+				department_name					String
+				department_acronym				String
+				id_prefix						String
+
+	Table Name: YearLevelInformationTable
+
+				year_level_id					String		'YRLV**'
+				year_level_description			String
+				acronym							String
+				id_prefix						String
+				year_level_no					Int16
+				course_group_id					String		'CG**'
+				group_no						Byte		'1, 2, 3, 4, 5...'
+				group_description				String
+				is_semestral					Boolean
+				is_per_unit						Boolean
+				
+	Table Name: WeekDayTable
+
+				week_id							Byte
+				week_description				String
+				acronym							String
+
+	Table Name: WeekTimeTable
+
+				time_id							Byte
+				time_description				String
+				
+	Table Name: SchoolFeeCategoryTable
+
+				fee_category_id					String		'FCID**'
+				category_description			String
+				category_no						Byte
+				
+	Table Name: CourseGroupTable
+
+				course_group_id				String		'CG**'
+				group_no					Byte		'1, 2, 3, 4, 5...'
+				group_description			String
+				is_semestral				Boolean
+				is_per_unit					Boolean
+				
+TO GET THE STUDENT ENROLMENT COURSE BY STUDENT SYSTEM ID DATE START AND DATE END (USED BY THE OFFICE USERS FOR ENROLMENT)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function SelectBySysIDStudentDateStartEndStudentEnrolmentCourse(CommonExchange.SysAccess userInfo, String studentSysId, 
+            String dateStart, String dateEnd)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_enrolmentcourse			String		'SYSECR*********'
+				sysid_student					String 		'SYSSTD*******'
+				course_id						String		'CRSE**'
+				sysid_schoolfee					String		'SYSSCF***'
+				sysid_semester					String		'SYSSEM****'
+				is_current_course				Boolean
+				course_group_id					String		'CG**'
+				course_title					String
+				course_acronym					String
+				group_description				String
+				is_semestral					Boolean
+				last_semester_enrolled			String		'SYSSEM****'
+				
+TO GET THE STUDENT ENROLMENT LEVEL BY STUDENT SYSTEM ID YEAR ID AND SEMESTER SYSTEM ID (USED BY THE OFFICE USERS FOR ENROLMENT)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function SelectBySysIDStudentYearIDSemesterStudentEnrolmentLevel(CommonExchange.SysAccess userInfo, String studentSysId, 
+            String yearId, String semesterSysId, String enrolmentCourseSysId, Boolean isMarkedDeleted)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_enrolmentlevel			String 		'SYSELV*********'
+				sysid_enrolmentcourse			String		'SYSECR*********'
+				sysid_feelevel					String 		'SYSFLV******'
+				sysid_semester					String		'SYSSEM****'
+				level_section					String
+				is_entry_level					Boolean
+				is_marked_deleted				Boolean
+				is_graduate_student				Boolean
+				is_international				Boolean
+				enrolment_level_no				Int32
+				course_id						String		'CRSE**'
+				sysid_schoolfee					String		'SYSSCF***'
+				year_level_id					String 		'YRLV**'				
+				year_level_description			String
+				year_level_no					Int16
+				is_graduate_level				Boolean
+				course_group_id					String		'CG**'
+				group_description				String
+				is_semestral					Boolean
+				is_enrolled						Boolean
+				
+TO GET THE STUDENT ENROLMENT COURSE BY STUDENT SYSTEM ID (USED FOR THE ENROLMENT COURSE HISTORY)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function SelectBySysIDStudentForEnrolmentHistoryEnrolmentCourse(CommonExchange.SysAccess userInfo, String studentSysId)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_enrolmentcourse			String		'SYSECR*********'
+				sysid_student					String 		'SYSSTD*******'
+				course_id						String		'CRSE**'
+				sysid_schoolfee					String		'SYSSCF***'
+				sysid_semester					String		'SYSSEM****'
+				is_current_course				Boolean
+				course_group_id					String		'CG**'
+				course_title					String
+				course_acronym					String
+				group_description				String
+				is_semestral					Boolean
+				department_name					String
+				department_acronym				String
+				year_description				String
+				semester_description			String
+				
+TO GET THE STUDENT ENROLMENT LEVEL BY STUDENT SYSTEM ID (USED FOR THE ENROLMENT LEVEL HISTORY)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function SelectBySysIDStudentForEnrolmentHistoryEnrolmentLevel(CommonExchange.SysAccess userInfo, String studentSysId)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_enrolmentlevel			String 		'SYSELV*********'
+				sysid_enrolmentcourse			String		'SYSECR*********'
+				sysid_feelevel					String 		'SYSFLV******'
+				sysid_semester					String		'SYSSEM****'
+				level_section					String
+				is_entry_level					Boolean
+				is_marked_deleted				Boolean
+				is_graduate_student				Boolean
+				is_international				Boolean
+				enrolment_level_no				Int32
+				course_id						String		'CRSE**'
+				sysid_schoolfee					String		'SYSSCF***'
+				year_level_id					String 		'YRLV**'				
+				year_level_description			String
+				year_level_no					Int16
+				course_group_id					String		'CG**'
+				group_description				String
+				is_semestral					Boolean
+				year_description				String
+				semester_description			String
+
+TO GET THE SUBJECT SCHEDULE BY DATE START END AND BY STUDENT ENROLMENT LEVEL
+
+	==> instantiate from RemCntStudentLoadingManager
+	call the function SelectBySysIDEnrolmentLevelDateStartEndSubjectScheduleStudentLoad(CommonExchange.SysAccess userInfo, String studentSysId, 
+            String enrolmentLevelSysId, String feeLevelSysId, String semesterSysId, Boolean isGraduateStudent, Boolean isInternational,
+            Boolean isEnrolled, String dateStart, String dateEnd, String serverDateTime)
+
+	this will return a DATATABLE which contains the following field:
+
+	   
+				sysid_schedule					String		'SYSCH*********'
+				sysid_subject					String		'SYSSBJ******'
+				year_semester_id				String
+				is_team_teaching				Boolean
+				is_fixed_amount					Boolean
+				amount							Decimal
+				subject_code					String
+				descriptive_title				String
+				subject_lecture_units			Byte
+				subject_lab_units				Byte
+				subject_no_hours				String	
+				department_name					String
+				is_semestral					Boolean
+				group_no						Byte		GraduateSchoolDoctorate = 1,
+        													College = 2,
+        													HighSchool = 3,
+        													GradeSchool = 4
+				load_id							Int64
+				load_date						String
+				deload_date						String
+				load_lecture_units				Byte
+				load_lab_units					Byte
+				load_no_hours					String	
+				is_premature_deloaded			Boolean
+				is_loaded_to_student			Boolean
+				slots_available					Int16		if the value is -1, it means the schedule is a field room. if the value is 0, it means there are
+															no more slots available.
+				subject_amount					Decimal
+
+	call this function evertime the user selects an enrolment level
+
+	==> after calling this function, create a DATATABLE "studentLoadTable" the which contains the following fields
+	
+				load_id							Int64
+				sysid_enrolmentlevel			String
+				sysid_schedule					String
+
+	this will be used for the InsertDeleteStudentLoad paramater
+
+TO GET THE SUBJECT SCHEDULE DETAILS BY DATE START END AND BY STUDENT ENROLMENT LEVEL
+
+	==> instantiate from RemCntStudentLoadingManager
+	call the function SelectBySysIDEnrolmentLevelDateStartEndScheduleDetailsStudentLoad(CommonExchange.SysAccess userInfo, 
+		String enrolmentLevelSysId, String dateStart, String dateEnd)
+
+	this will return a DATATABLE which contains the following field:
+
+	   			sysid_scheddetails				String		'SYSSDL*********'
+				sysid_classroom					String		'SYSCRM****'
+				field_room						String
+				is_classroom					Boolean
+				section							String
+				sysid_schedule					String		'SYSCH*********'
+				is_team_teaching				Boolean
+				is_fixed_amount					Boolean
+				amount							Boolean
+				year_semester_id				String
+				department_id					String		'DEPT***'
+				subject_code					String
+				descriptive_title				String
+				is_semestral					Boolean
+				group_no						Byte		GraduateSchoolDoctorate = 1,
+        													College = 2,
+        													HighSchool = 3,
+        													GradeSchool = 4
+				classroom_code					String
+				load_id							Int64
+				sysid_employee					String		'SYSEMP***'
+				last_name						String
+				first_name						String
+				middle_name						String
+				day_time						String
+
+	call this function evertime the user selects an enrolment level
+
+TO GET THE SUBJECT SCHEDULE DAY AND TIME WITH AND WITHOUT TEACHER LOAD
+
+	==> instantiate from RemCntSubjectSchedulingManager
+	call the function SelectBySysIDScheduleDetailsListSubjectSchedule(CommonExchange.SysAccess userInfo, String scheduleDetailsSysIdList)
+
+	Parameter requirements:
+
+		scheduleDetailsSysIdList - SYSSDL00000001, SYSSDL00000006, SYSSDL00000005
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_scheddetails 				String
+				week_id							Byte
+				time_id							Byte
+				
+TO GET THE SUBJECT SCHEDULE BY STUDENT ENROLMENT LEVEL SYSTEM ID LIST
+
+	==> instantiate from RemCntStudentLoadingManager
+	call the function SelectBySysIDEnrolmentLevelListSubjectScheduleStudentLoad(CommonExchange.SysAccess userInfo, String enrolmentLevelSysIdList,
+            String serverDateTime)
+
+	this will return a DATATABLE which contains the following field:
+	   
+				sysid_schedule					String		'SYSCH*********'
+				sysid_subject					String		'SYSSBJ******'
+				year_semester_id				String
+				is_team_teaching				Boolean
+				is_fixed_amount					Boolean
+				amount							Decimal
+				subject_code					String
+				descriptive_title				String
+				subject_lecture_units			Byte
+				subject_lab_units				Byte
+				subject_no_hours				String	
+				department_name					String
+				is_semestral					Boolean
+				group_no						Byte		GraduateSchoolDoctorate = 1,
+        													College = 2,
+        													HighSchool = 3,
+        													GradeSchool = 4
+				load_id							Int64
+				sysid_enrolmentlevel			String		'SYSELV*********'
+				load_date						String
+				deload_date						String
+				load_lecture_units				Byte
+				load_lab_units					Byte
+				load_no_hours					String
+				
+	call this function when printing student load from a multiple search result of students
+	
+TO GET THE SUBJECT SCHEDULE DETAILS BY STUDENT ENROLMENT LEVEL SYSTEM ID LIST
+
+	==> instantiate from RemCntStudentLoadingManager
+	call the function SelectBySysIDEnrolmentLevelListScheduleDetailsStudentLoad(CommonExchange.SysAccess userInfo, String enrolmentLevelSysIdList)
+
+	this will return a DATATABLE which contains the following field:
+
+	   			sysid_scheddetails				String		'SYSSDL*********'
+				sysid_classroom					String		'SYSCRM****'
+				field_room						String
+				is_classroom					Boolean
+				section							String
+				sysid_schedule					String		'SYSCH*********'
+				is_team_teaching				Boolean
+				is_fixed_amount					Boolean
+				amount							Boolean
+				department_id					String		'DEPT***'
+				subject_code					String
+				descriptive_title				String
+				is_semestral					Boolean
+				group_no						Byte		GraduateSchoolDoctorate = 1,
+        													College = 2,
+        													HighSchool = 3,
+        													GradeSchool = 4
+				classroom_code					String
+				load_id							Int64
+				sysid_employee					String		'SYSEMP***'
+				last_name						String
+				first_name						String
+				middle_name						String
+				sysid_enrolmentlevel			String		'SYSELV*********'
+				day_time						String
+
+	call this function when printing student load from a multiple search result of students
+	
+TO GET THE SCHOOL FEE DETAILS BY SYSTEM ID OF STUDENT, FEE LEVEL, SEMESTER, AND IS GRADUATING STUDENT (USED FOR STUDENT LOADING IN THE CHARGES LIST AND FINANCE CASHIERING)
+
+	==> instantiate from RemCntStudentLoadingManager
+	call the function SelectBySysIDStudentFeeLevelSemesterSchoolFeeDetailsStudentLoad(CommonExchange.SysAccess userInfo, String studentSysId,
+            String enrolmentLevelSysId, String feeLevelSysId, String semesterSysId, Boolean isGraduateStudent, Boolean isInternational,
+            Boolean isEnrolled, Boolean isMarkedDeleted, Boolean isPreviousCharge)
+
+	this will return a DATATABLE which contains the following field:
+
+				table_id						Int32
+				sysid_student					String		'SYSSTD*********'
+				sysid_enrolmentlevel			String		'SYSELV*********'
+				sysid_feedetails				String		'SYSFDL*********'
+				sysid_feeparticular				String		'SYSFPR***'
+				is_level_increase				Boolean	
+				is_added_level_fee				Boolean			
+				amount							Decimal
+				fee_category_id					String		'FCID**'
+				category_description			String
+				particular_description			String
+				is_office_access				Boolean
+				category_no						String
+				additional_fee_id				Int64
+				optional_fee_id					Int64
+				is_additional_fee				Boolean
+				is_optional_fee					Boolean
+				is_per_year_tuition_fee			Boolean
+				is_per_unit_tuition_fee			Boolean
+				is_fixed_amount_tuition_fee		Boolean
+				is_special_class_tuition_fee	Boolean
+				international_percentage		Single
+				
+	Query possibilities:
+	
+		-- A - is_enrolled
+		-- B - sysid_enrolmentlevel
+		-- C - is_marked_deleted
+		-- D - is_previous_charge
+
+		--	A	B	C	D
+		--	==============
+		--	0	0	0	0	used to get the charges of a level that is candidate for enrolment
+		--	0	0	0	1	NOT INCLUDED
+		--	0	0	1	0	NOT INCLUDED
+		--	0	0	1	1	NOT INCLUDED
+		--	0	1	0	0	NOT INCLUDED
+		--	0	1	0	1	NOT INCLUDED
+		--	0	1	1	0	NOT INCLUDED
+		--	0	1	1	1	NOT INCLUDED
+		--	1	0	0	0	NOT INCLUDED
+		--	1	0	0	1	NOT INCLUDED
+		--	1	0	1	0	NOT INCLUDED
+		--	1	0	1	1	NOT INCLUDED
+		--	1	1	0	0	used to get the current charges of an enrolled level
+		--	1	1	0	1	used to get the previous charges of an enrolled level and deleted level
+		--	1	1	1	0	used to get the current charges of a deleted level
+		--	1	1	1	1	NOT INCLUDED
+				
+TO GET THE SCHOOL FEE DETAILS BY SYSTEM ID OF STUDENT LIST AND SYSTEM ID OF THE ENROLMENT LEVEL LIST(USED FOR THE MULTIPLE PRINTING OF STUDENT CHARGES)
+
+	==> instantiate from RemCntStudentLoadingManager
+	call the function SelectBySysIDStudentEnrolmentLevelListSchoolFeeDetailsStudentLoad(CommonExchange.SysAccess userInfo, String studentSysIdList, 
+            String enrolmentLevelSysIdList)
+
+	this will return a DATATABLE which contains the following field:
+
+				table_id						Int32
+				sysid_student					String		'SYSSTD*********'
+				sysid_enrolmentlevel			String		'SYSELV*********'
+				sysid_feedetails				String		'SYSFDL*********'
+				sysid_feeparticular				String		'SYSFPR***'
+				is_level_increase				Boolean		
+				amount							Decimal
+				fee_category_id					String		'FCID**'
+				category_description			String
+				particular_description			String
+				is_office_access				Boolean
+				category_no						String
+				additional_fee_id				Int64
+				optional_fee_id					Int64
+				is_additional_fee				Boolean
+				is_optional_fee					Boolean
+				is_per_year_tuition_fee			Boolean
+				is_per_unit_tuition_fee			Boolean
+				is_fixed_amount_tuition_fee		Boolean
+				is_special_class_tuition_fee	Boolean
+				international_percentage		Single
+
+				
+TO GET THE OPTIONAL SCHOOL FEE DETAILS BY SYSTEM ID OF STUDENT, FEE LEVEL, SEMESTER (USED FOR STUDENT LOADING IN THE CHARGES LIST)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the function SelectBySysIDStudentFeeLevelSemesterForOptionalFeeDetailsStudentOptionalFee(CommonExchange.SysAccess userInfo, String studentSysId,
+            String feeLevelSysId, String semesterSysId)
+            
+	this will return a DATATABLE which contains the following field:
+
+				table_id						Int32
+				sysid_feedetails				String		'SYSFDL*********'
+				sysid_feeparticular				String		'SYSFPR***'
+				is_level_increase				Boolean		
+				is_added_level_fee				Boolean
+				amount							Decimal
+				fee_category_id					String		'FCID**'
+				category_description			String
+				particular_description			String
+				is_office_access				Boolean
+				category_no						String
+				
+TO GET THE STUDENT PAYMENTS AND DISCOUNTS BY DATE START END AND STUDENT LIST (USED FOR STUDENT LOADING IN THE CHARGES LIST AND FINANCE CASHIERING)
+
+	==> instantiate from RemCntCashieringManager
+	call the function SelectBySysIDStudentListDateStartEndStudentPaymentsDiscountsReimbursement(CommonExchange.SysAccess userInfo, String studentSysIdList,
+            String dateStart, String dateEnd, Boolean includeDiscount, String serverDateTime)
+            
+	this will return a DATATABLE which contains the following field:
+
+				payment_discount_reimbursement_id			Int64
+				sysid_student								String		'SYSSTD*********'
+				payment_discount_reimbursement_date			String
+				receipt_no									String
+				remarks_discount_reimbursement_description	String
+				amount										Decimal
+				is_payment									Boolean
+				is_discount									Boolean
+				is_reimbursement							Boolean
+				
+TO GET THE BALANCE CARRIED FORWARD BY SYSTEM ID OF STUDENT LIST AND DATE ENDING (USED FOR INDIVIDUAL AND MULTIPLE PRINTING OF STUDENT CHARGES)
+
+	==> instantiate from RemCntStudentLoadingManager
+	call the function SelectBySysIDStudentListDateEndingBalanceCarriedForwardStudentLoad(CommonExchange.SysAccess userInfo, String studentSysIdList,
+            String dateEnding)
+
+	this will return a DATATABLE which contains the following field:
+
+				table_id						Int32
+				sysid_student					String		'SYSSTD*********'	
+				amount							Decimal
+				
+				
+TO DETERMINE IF THE STUDENT HAS A PAYMENT MADE WITH A GIVEN PERIOD BEFORE ENROLMENT WILL BE COMMITTED (FOR STUDENT LOADING)
+
+	==> instantiate from RemCntCashieringManager
+	call the function IsExistsPaymentBySysIDStudentDateStartEndStudentPayments(CommonExchange.SysAccess userInfo,
+            String studentSysId, String dateStart, String dateEnd)
+                
+	this will return a BOOLEAN value
+
+TO INSERT OR DELETE A SUBJECT LOAD
+
+	==> instantiate from RemCntStudentLoadingManager
+	call the function InsertDeleteStudentLoad(CommonExchange.SysAccess userInfo, DataTable studentLoadTable)
+
+	the TABLE: "studentLoadTable" must contain the following fields
+
+				load_id							Int64
+				sysid_enrolmentlevel			String
+				sysid_schedule					String
+				
+TO INSERT OR DELETE A STUDENT OPTIONAL SCHOOL FEE
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue InsertDeleteStudentOptionalFee(CommonExchange.SysAccess userInfo, DataTable optionalFeeTable)
+
+	the TABLE: "optionalFeeTable" must contain the following fields
+
+				optional_fee_id					Int64
+				sysid_enrolmentlevel			String
+				sysid_feedetails				String
+
+				
+BUSINESS RULES
+
+	1. Only the Office user, VP of Academic Affairs can subject load a teacher

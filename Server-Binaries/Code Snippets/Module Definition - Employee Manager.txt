@@ -1,0 +1,17 @@
+CACHED DATA
+
+	==> instantiate from RemCntEmployeeManager
+	call the function GetDataSetForEmployeeInfo(CommonExchange.SysAccess userInfo)
+
+	this will return a DATASET which contains the following table:
+	
+	Table Name: RankDegreeTable
+
+				degree_id						String		'RD*****'
+				category_id						String		'RC*****'
+				degree_no						Byte
+				degree_description				String
+				category_description			String
+				level_points					String
+				previous_rate					Decimal
+				increase_rate					Decimal

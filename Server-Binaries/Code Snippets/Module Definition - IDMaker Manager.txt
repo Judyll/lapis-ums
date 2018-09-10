@@ -1,0 +1,48 @@
+
+TO GET THE SEARCHED STUDENT OR EMPLOYEE
+
+	instantiate RemoteClient.RemCntIdMakerManager class
+	use the method GetByQueryStringStudentEmployeeInformation(<userInfo>, <queryString>).  This will return a datatable
+		with the following fields:
+		
+			sysid_student_employee				String
+			student_employee_id					String
+			card_number							String
+			e_code								String
+			last_name							String
+			first_name							String
+			middle_name							String
+			home_address						String
+			course_title_department_name		String
+			acronym_employment_type				String
+			emer_name							String
+			emer_address						String
+			emer_phone_nos						String
+			emer_relationship					String
+			is_student							Boolean
+			
+TO DETERMINE IF THE SELECTED DATA IS A STUDENT OR AN EMPLOYEE
+
+	use the is_student field based on sysid_student_employee as primary key
+	
+TO UPDATE THE STUDENT ID MAKER INFORMATION
+
+	instantiate RemoteClient.RemCntIdMakerManager class
+	use the method UpdateForIdMakerStudentInformation(<userInfo>, <studentEmployeeInfo>)
+	
+	fields required:
+	
+			sysid_student
+			card_number
+			e_code
+	
+TO UPDATE THE EMPLOYEE ID MAKER INFORMATION
+
+	instantiate RemoteClient.RemCntIdMakerManager class
+	use the method UpdateForIdMakerEmployeeInformation(<userInfo>, <studentEmployeeInfo>)
+	
+	fields required
+	
+			sysid_employee
+			card_number
+	

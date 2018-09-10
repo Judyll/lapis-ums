@@ -1,0 +1,1311 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8BF75C21-6940-4A88-94A4-BA2C1A74862D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OfficeServices</RootNamespace>
+    <AssemblyName>ofsvc</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="bssvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Base Solution\BaseServices\BaseServices\bin\Release\bssvc.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="rclnt, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Server Solutions\Server DLL\rclnt.dll</HintPath>
+    </Reference>
+    <Reference Include="rslib, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Server Solutions\Server DLL\rslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XPPanel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c1a4c9eadd4711d4">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ZTesting\XP Panel DLL\XPPanel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseClass\AuxiliaryServiceLogic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliaryInformationManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliaryInformationManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliaryInformationManager.Designer.cs">
+      <DependentUpon>AuxiliaryInformationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliarySchedule.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliarySchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliarySchedule.Designer.cs">
+      <DependentUpon>AuxiliarySchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliaryScheduleDetails.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliaryScheduleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliaryScheduleDetails.Designer.cs">
+      <DependentUpon>AuxiliaryScheduleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliarySchedulingManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliarySchedulingManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliarySchedulingManager.Designer.cs">
+      <DependentUpon>AuxiliarySchedulingManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\OtherInformation.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\OtherInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\OtherInformation.designer.cs">
+      <DependentUpon>OtherInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\Service.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\BaseForm\Service.Designer.cs">
+      <DependentUpon>Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryInformationSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryInformationSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleDetailsCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleDetailsCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleDetailsSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleDetailsSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleDetailsUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleDetailsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliarySearchOnTextboxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliarySearchOnTextboxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryServiceCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryServiceCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryServiceUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryServiceUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseClass\ScholarshipLogic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\Scholarship.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\Scholarship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\Scholarship.Designer.cs">
+      <DependentUpon>Scholarship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\ScholarshipManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\ScholarshipManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\ScholarshipManager.Designer.cs">
+      <DependentUpon>ScholarshipManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\SearchListStudentScholarship.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\SearchListStudentScholarship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\SearchListStudentScholarship.Designer.cs">
+      <DependentUpon>SearchListStudentScholarship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\StudentScholarship.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\StudentScholarship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\StudentScholarship.Designer.cs">
+      <DependentUpon>StudentScholarship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\StudentSearch.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\StudentSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\BaseForm\StudentSearch.Designer.cs">
+      <DependentUpon>StudentSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\ScholarshipCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\ScholarshipCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\ScholarshipSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\ScholarshipSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\ScholarshipUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\ScholarshipUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\StudentScholarshipCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\StudentScholarshipCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\StudentScholarshipSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\StudentScholarshipSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\StudentScholarshipUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassScholarshipManager\DerivedForm\StudentScholarshipUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseClass\StudentLoadingLogic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\ChangeStudentEnrollmentLevel.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\ChangeStudentEnrollmentLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\ChangeStudentEnrollmentLevel.Designer.cs">
+      <DependentUpon>ChangeStudentEnrollmentLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\MajorExamSchedule.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\MajorExamSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\MajorExamSchedule.Designer.cs">
+      <DependentUpon>MajorExamSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\SearchListForStudent.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\SearchListForStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\SearchListForStudent.Designer.cs">
+      <DependentUpon>SearchListForStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\SearchOnTextboxListStudentLoad.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\SearchOnTextboxListStudentLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\SearchOnTextboxListStudentLoad.Designer.cs">
+      <DependentUpon>SearchOnTextboxListStudentLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentEnrolmentHistory.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentEnrolmentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentEnrolmentHistory.Designer.cs">
+      <DependentUpon>StudentEnrolmentHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentGrades.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentGrades.Designer.cs">
+      <DependentUpon>StudentGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentLoading.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentLoading.Designer.cs">
+      <DependentUpon>StudentLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentLoadingManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentLoadingManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\BaseForm\StudentLoadingManager.Designer.cs">
+      <DependentUpon>StudentLoadingManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\ChargesReport.cs">
+      <DependentUpon>ChargesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalAmountDue.cs">
+      <DependentUpon>CrystalAmountDue.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalClearance.cs">
+      <DependentUpon>CrystalClearance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalEnrollmentQuickCount.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalEnrollmentQuickCount.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalEnrolmentListForRegistrar.cs">
+      <DependentUpon>CrystalEnrolmentListForRegistrar.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalEnrolmentListForRegistrarVersion2.cs">
+      <DependentUpon>CrystalEnrolmentListForRegistrarVersion2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalScheduleDetailsSubReport.cs">
+      <DependentUpon>CrystalScheduleDetailsSubReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentGrade.cs">
+      <DependentUpon>CrystalStudentGrade.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentInsuranceList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalStudentInsuranceList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentList.cs">
+      <DependentUpon>CrystalStudentList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentLoad.cs">
+      <DependentUpon>CrystalStudentLoad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentMasterList.cs">
+      <DependentUpon>CrystalStudentMasterList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentStatementOfAccount.cs">
+      <DependentUpon>CrystalStudentStatementOfAccount.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentStatementOfAccountForFinals.cs">
+      <DependentUpon>CrystalStudentStatementOfAccountForFinals.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalSubNoOfStudents.cs">
+      <DependentUpon>CrystalSubNoOfStudents.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalSubQuickCountStudentDisplay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalSubQuickCountStudentDisplay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalSubStudentListFemale.cs">
+      <DependentUpon>CrystalSubStudentListFemale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalSubStudentListForRegistrar.cs">
+      <DependentUpon>CrystalSubStudentListForRegistrar.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalSubStudentListForRegistrarVersion2.cs">
+      <DependentUpon>CrystalSubStudentListForRegistrarVersion2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalSubStudentListMale.cs">
+      <DependentUpon>CrystalSubStudentListMale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystalSubStudentListUnassign.cs">
+      <DependentUpon>CrystalSubStudentListUnassign.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\CrystalReport\CrystaStudentChargesSummary.cs">
+      <DependentUpon>CrystaStudentChargesSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DataSet\EnrolmentListForRegistrar.cs">
+      <DependentUpon>EnrolmentListForRegistrar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DataSet\EnrolmentListForRegistrar.Designer.cs">
+      <DependentUpon>EnrolmentListForRegistrar.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DataSet\StudentEnrolled.cs">
+      <DependentUpon>StudentEnrolled.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DataSet\StudentEnrolled.Designer.cs">
+      <DependentUpon>StudentEnrolled.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DataSet\StudentLoad.cs">
+      <DependentUpon>StudentLoad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DataSet\StudentLoad.Designer.cs">
+      <DependentUpon>StudentLoad.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DataSet\TranscriptDataSet.Designer.cs">
+      <DependentUpon>TranscriptDataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DerivedForm\FilteredStudentSearch.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DerivedForm\FilteredStudentSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DerivedForm\OptionalFeeSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DerivedForm\OptionalFeeSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DerivedForm\SubjectSearchOnTextBoxListStudentLoading.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassStudentLoadingManager\DerivedForm\SubjectSearchOnTextBoxListStudentLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseClass\SubjectSchedulingLogic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\ClassroomDateTimeForModular.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\ClassroomDateTimeForModular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\ClassroomDateTimeForModular.Designer.cs">
+      <DependentUpon>ClassroomDateTimeForModular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\ClassroomDateTimeScheduler.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\ClassroomDateTimeScheduler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\ClassroomDateTimeScheduler.Designer.cs">
+      <DependentUpon>ClassroomDateTimeScheduler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\FieldroomDateTimeForModular.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\FieldroomDateTimeForModular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\FieldroomDateTimeForModular.Designer.cs">
+      <DependentUpon>FieldroomDateTimeForModular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\FieldroomDateTimeScheduler.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\FieldroomDateTimeScheduler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\FieldroomDateTimeScheduler.Designer.cs">
+      <DependentUpon>FieldroomDateTimeScheduler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SearchList.Designer.cs">
+      <DependentUpon>SearchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SearchOnTextboxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SearchOnTextboxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SearchOnTextboxList.Designer.cs">
+      <DependentUpon>SearchOnTextboxList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SubjectSchedule.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SubjectSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SubjectSchedule.designer.cs">
+      <DependentUpon>SubjectSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SubjectScheduleDetails.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SubjectScheduleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SubjectScheduleDetails.designer.cs">
+      <DependentUpon>SubjectScheduleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SubjectSchedulingManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SubjectSchedulingManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\BaseForm\SubjectSchedulingManager.Designer.cs">
+      <DependentUpon>SubjectSchedulingManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\CrystalReport\CrystalStudentEnrolledList.cs">
+      <DependentUpon>CrystalStudentEnrolledList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\CrystalReport\CrystalSubClassRoomTime.cs">
+      <DependentUpon>CrystalSubClassRoomTime.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\CrystalReport\CrystalSubjectScheduleList.cs">
+      <DependentUpon>CrystalSubjectScheduleList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\CrystalReport\CrystalSubStudentFemale.cs">
+      <DependentUpon>CrystalSubStudentFemale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\CrystalReport\CrystalSubStudentMale.cs">
+      <DependentUpon>CrystalSubStudentMale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\CrystalReport\CrystalSubStudentUnassign.cs">
+      <DependentUpon>CrystalSubStudentUnassign.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DataSet\StudentEnrolled.cs">
+      <DependentUpon>StudentEnrolled.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DataSet\StudentEnrolled.Designer.cs">
+      <DependentUpon>StudentEnrolled.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeForModularCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeForModularCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeForModularUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeForModularUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeSchedulerCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeSchedulerCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeSchedulerUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeSchedulerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomSearchOnTextboxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomSearchOnTextboxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\FieldroomDateTimeForModularCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\FieldroomDateTimeForModularCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\FieldroomDateTimeForModularUpdate. Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\FieldroomDateTimeForModularUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\FieldRoomDateTimeSchedulerCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\FieldRoomDateTimeSchedulerCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\FieldRoomDateTimeSchedulerUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\FieldRoomDateTimeSchedulerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleDetailsCreate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleDetailsCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleDetailsUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleDetailsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleSearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectSearchOnTextboxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassSubjectSchedulingManager\DerivedForm\SubjectSearchOnTextboxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\BaseClass\TeacherLoadingLogic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\BaseForm\SearchOnTextboxListTeacherLoading.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\BaseForm\SearchOnTextboxListTeacherLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\BaseForm\SearchOnTextboxListTeacherLoading.Designer.cs">
+      <DependentUpon>SearchOnTextboxListTeacherLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\BaseForm\TeacherLoadingManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\BaseForm\TeacherLoadingManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\BaseForm\TeacherLoadingManager.Designer.cs">
+      <DependentUpon>TeacherLoadingManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\CrystalReport\CrystalAuxiliarySubReport.cs">
+      <DependentUpon>CrystalAuxiliarySubReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\CrystalReport\CrystalLectureLabHoursTotal.cs">
+      <DependentUpon>CrystalLectureLabHoursTotal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\CrystalReport\CrystalSubjectSubReport.cs">
+      <DependentUpon>CrystalSubjectSubReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\CrystalReport\CrystalTeacherLoad.cs">
+      <DependentUpon>CrystalTeacherLoad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\DataSet\TeacherLoad.cs">
+      <DependentUpon>TeacherLoad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\DataSet\TeacherLoad.Designer.cs">
+      <DependentUpon>TeacherLoad.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\DerivedForm\ScheduleSearchOnTextBoxList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\DerivedForm\ScheduleSearchOnTextBoxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\DerivedForm\SubjectServiceSearchOnTextBoxListTeacherLoad.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassTeacherLoadingManager\DerivedForm\SubjectServiceSearchOnTextBoxListTeacherLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliaryInformationManager.resx">
+      <DependentUpon>AuxiliaryInformationManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliarySchedule.resx">
+      <DependentUpon>AuxiliarySchedule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliaryScheduleDetails.resx">
+      <DependentUpon>AuxiliaryScheduleDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\BaseForm\AuxiliarySchedulingManager.resx">
+      <DependentUpon>AuxiliarySchedulingManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\BaseForm\OtherInformation.resx">
+      <DependentUpon>OtherInformation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\BaseForm\Service.resx">
+      <DependentUpon>Service.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryInformationSearchList.resx">
+      <DependentUpon>AuxiliaryInformationSearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleCreate.resx">
+      <DependentUpon>AuxiliaryScheduleCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleDetailsCreate.resx">
+      <DependentUpon>AuxiliaryScheduleDetailsCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleDetailsSearchList.resx">
+      <DependentUpon>AuxiliaryScheduleDetailsSearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleDetailsUpdate.resx">
+      <DependentUpon>AuxiliaryScheduleDetailsUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryScheduleUpdate.resx">
+      <DependentUpon>AuxiliaryScheduleUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliarySearchOnTextboxList.resx">
+      <DependentUpon>AuxiliarySearchOnTextboxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryServiceCreate.resx">
+      <DependentUpon>AuxiliaryServiceCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAuxiliaryServicesManager\DerivedForm\AuxiliaryServiceUpdate.resx">
+      <DependentUpon>AuxiliaryServiceUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassScholarshipManager\BaseForm\Scholarship.resx">
+      <DependentUpon>Scholarship.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassScholarshipManager\BaseForm\ScholarshipManager.resx">
+      <DependentUpon>ScholarshipManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassScholarshipManager\BaseForm\SearchListStudentScholarship.resx">
+      <DependentUpon>SearchListStudentScholarship.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassScholarshipManager\BaseForm\StudentScholarship.resx">
+      <DependentUpon>StudentScholarship.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassScholarshipManager\BaseForm\StudentSearch.resx">
+      <DependentUpon>StudentSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassScholarshipManager\DerivedForm\ScholarshipCreate.resx">
+      <DependentUpon>ScholarshipCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassScholarshipManager\DerivedForm\ScholarshipSearchOnTextBoxList.resx">
+      <DependentUpon>ScholarshipSearchOnTextBoxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassScholarshipManager\DerivedForm\ScholarshipUpdate.resx">
+      <DependentUpon>ScholarshipUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassScholarshipManager\DerivedForm\StudentScholarshipCreate.resx">
+      <DependentUpon>StudentScholarshipCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassScholarshipManager\DerivedForm\StudentScholarshipSearchOnTextBoxList.resx">
+      <DependentUpon>StudentScholarshipSearchOnTextBoxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassScholarshipManager\DerivedForm\StudentScholarshipUpdate.resx">
+      <DependentUpon>StudentScholarshipUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\BaseForm\ChangeStudentEnrollmentLevel.resx">
+      <DependentUpon>ChangeStudentEnrollmentLevel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\BaseForm\MajorExamSchedule.resx">
+      <DependentUpon>MajorExamSchedule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\BaseForm\SearchListForStudent.resx">
+      <DependentUpon>SearchListForStudent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\BaseForm\SearchOnTextboxListStudentLoad.resx">
+      <DependentUpon>SearchOnTextboxListStudentLoad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\BaseForm\StudentEnrolmentHistory.resx">
+      <DependentUpon>StudentEnrolmentHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\BaseForm\StudentGrades.resx">
+      <DependentUpon>StudentGrades.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\BaseForm\StudentLoading.resx">
+      <DependentUpon>StudentLoading.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\BaseForm\StudentLoadingManager.resx">
+      <DependentUpon>StudentLoadingManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\ChargesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ChargesReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalAmountDue.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalAmountDue.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalClearance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalClearance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalEnrollmentQuickCount.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalEnrollmentQuickCount.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalEnrolmentListForRegistrar.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalEnrolmentListForRegistrar.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalEnrolmentListForRegistrarVersion2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalEnrolmentListForRegistrarVersion2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalScheduleDetailsSubReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalScheduleDetailsSubReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentGrade.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentGrade.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentInsuranceList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentInsuranceList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentLoad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentLoad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentMasterList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentMasterList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentStatementOfAccount.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentStatementOfAccount.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalStudentStatementOfAccountForFinals.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentStatementOfAccountForFinals.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalSubNoOfStudents.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubNoOfStudents.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalSubQuickCountStudentDisplay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubQuickCountStudentDisplay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalSubStudentListFemale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubStudentListFemale.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalSubStudentListForRegistrar.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubStudentListForRegistrar.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalSubStudentListForRegistrarVersion2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubStudentListForRegistrarVersion2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalSubStudentListMale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubStudentListMale.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystalSubStudentListUnassign.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubStudentListUnassign.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\CrystalReport\CrystaStudentChargesSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystaStudentChargesSummary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\DerivedForm\FilteredStudentSearch.resx">
+      <DependentUpon>FilteredStudentSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\DerivedForm\OptionalFeeSearchOnTextBoxList.resx">
+      <DependentUpon>OptionalFeeSearchOnTextBoxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassStudentLoadingManager\DerivedForm\SubjectSearchOnTextBoxListStudentLoading.resx">
+      <DependentUpon>SubjectSearchOnTextBoxListStudentLoading.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\BaseForm\ClassroomDateTimeForModular.resx">
+      <DependentUpon>ClassroomDateTimeForModular.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\BaseForm\ClassroomDateTimeScheduler.resx">
+      <DependentUpon>ClassroomDateTimeScheduler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\BaseForm\FieldroomDateTimeForModular.resx">
+      <DependentUpon>FieldroomDateTimeForModular.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\BaseForm\FieldroomDateTimeScheduler.resx">
+      <DependentUpon>FieldroomDateTimeScheduler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\BaseForm\SearchList.resx">
+      <DependentUpon>SearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\BaseForm\SearchOnTextboxList.resx">
+      <DependentUpon>SearchOnTextboxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\BaseForm\SubjectSchedule.resx">
+      <DependentUpon>SubjectSchedule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\BaseForm\SubjectScheduleDetails.resx">
+      <DependentUpon>SubjectScheduleDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\BaseForm\SubjectSchedulingManager.resx">
+      <DependentUpon>SubjectSchedulingManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\CrystalReport\CrystalStudentEnrolledList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalStudentEnrolledList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\CrystalReport\CrystalSubClassRoomTime.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubClassRoomTime.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\CrystalReport\CrystalSubjectScheduleList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubjectScheduleList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\CrystalReport\CrystalSubStudentFemale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubStudentFemale.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\CrystalReport\CrystalSubStudentMale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubStudentMale.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\CrystalReport\CrystalSubStudentUnassign.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubStudentUnassign.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeForModularCreate.resx">
+      <DependentUpon>ClassroomDateTimeForModularCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeForModularUpdate.resx">
+      <DependentUpon>ClassroomDateTimeForModularUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeSchedulerCreate.resx">
+      <DependentUpon>ClassroomDateTimeSchedulerCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomDateTimeSchedulerUpdate.resx">
+      <DependentUpon>ClassroomDateTimeSchedulerUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\ClassroomSearchOnTextboxList.resx">
+      <DependentUpon>ClassroomSearchOnTextboxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\FieldroomDateTimeForModularCreate.resx">
+      <DependentUpon>FieldroomDateTimeForModularCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\FieldroomDateTimeForModularUpdate.resx">
+      <DependentUpon>FieldroomDateTimeForModularUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\FieldRoomDateTimeSchedulerCreate.resx">
+      <DependentUpon>FieldRoomDateTimeSchedulerCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\FieldRoomDateTimeSchedulerUpdate.resx">
+      <DependentUpon>FieldRoomDateTimeSchedulerUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleCreate.resx">
+      <DependentUpon>SubjectScheduleCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleDetailsCreate.resx">
+      <DependentUpon>SubjectScheduleDetailsCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleDetailsUpdate.resx">
+      <DependentUpon>SubjectScheduleDetailsUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleSearchList.resx">
+      <DependentUpon>SubjectScheduleSearchList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\SubjectScheduleUpdate.resx">
+      <DependentUpon>SubjectScheduleUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassSubjectSchedulingManager\DerivedForm\SubjectSearchOnTextboxList.resx">
+      <DependentUpon>SubjectSearchOnTextboxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTeacherLoadingManager\BaseForm\SearchOnTextboxListTeacherLoading.resx">
+      <DependentUpon>SearchOnTextboxListTeacherLoading.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTeacherLoadingManager\BaseForm\TeacherLoadingManager.resx">
+      <DependentUpon>TeacherLoadingManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTeacherLoadingManager\CrystalReport\CrystalAuxiliarySubReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalAuxiliarySubReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTeacherLoadingManager\CrystalReport\CrystalLectureLabHoursTotal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalLectureLabHoursTotal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTeacherLoadingManager\CrystalReport\CrystalSubjectSubReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalSubjectSubReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTeacherLoadingManager\CrystalReport\CrystalTeacherLoad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalTeacherLoad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTeacherLoadingManager\DerivedForm\ScheduleSearchOnTextBoxList.resx">
+      <DependentUpon>ScheduleSearchOnTextBoxList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassTeacherLoadingManager\DerivedForm\SubjectServiceSearchOnTextBoxListTeacherLoad.resx">
+      <DependentUpon>SubjectServiceSearchOnTextBoxListTeacherLoad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassStudentLoadingManager\DataSet\EnrolmentListForRegistrar.xsc">
+      <DependentUpon>EnrolmentListForRegistrar.xsd</DependentUpon>
+    </None>
+    <None Include="ClassStudentLoadingManager\DataSet\EnrolmentListForRegistrar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnrolmentListForRegistrar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassStudentLoadingManager\DataSet\EnrolmentListForRegistrar.xss">
+      <DependentUpon>EnrolmentListForRegistrar.xsd</DependentUpon>
+    </None>
+    <None Include="ClassStudentLoadingManager\DataSet\StudentEnrolled.xsc">
+      <DependentUpon>StudentEnrolled.xsd</DependentUpon>
+    </None>
+    <None Include="ClassStudentLoadingManager\DataSet\StudentEnrolled.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentEnrolled.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassStudentLoadingManager\DataSet\StudentEnrolled.xss">
+      <DependentUpon>StudentEnrolled.xsd</DependentUpon>
+    </None>
+    <None Include="ClassStudentLoadingManager\DataSet\StudentLoad.xsc">
+      <DependentUpon>StudentLoad.xsd</DependentUpon>
+    </None>
+    <None Include="ClassStudentLoadingManager\DataSet\StudentLoad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentLoad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassStudentLoadingManager\DataSet\StudentLoad.xss">
+      <DependentUpon>StudentLoad.xsd</DependentUpon>
+    </None>
+    <None Include="ClassStudentLoadingManager\DataSet\TranscriptDataSet.xsc">
+      <DependentUpon>TranscriptDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassStudentLoadingManager\DataSet\TranscriptDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TranscriptDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassStudentLoadingManager\DataSet\TranscriptDataSet.xss">
+      <DependentUpon>TranscriptDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassSubjectSchedulingManager\DataSet\StudentEnrolled.xsc">
+      <DependentUpon>StudentEnrolled.xsd</DependentUpon>
+    </None>
+    <None Include="ClassSubjectSchedulingManager\DataSet\StudentEnrolled.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentEnrolled.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassSubjectSchedulingManager\DataSet\StudentEnrolled.xss">
+      <DependentUpon>StudentEnrolled.xsd</DependentUpon>
+    </None>
+    <None Include="ClassTeacherLoadingManager\DataSet\TeacherLoad.xsc">
+      <DependentUpon>TeacherLoad.xsd</DependentUpon>
+    </None>
+    <None Include="ClassTeacherLoadingManager\DataSet\TeacherLoad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TeacherLoad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassTeacherLoadingManager\DataSet\TeacherLoad.xss">
+      <DependentUpon>TeacherLoad.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,215 @@
+TO GET THE STUDENT ENROLMENT COURSE BY STUDENT SYSTEM ID (FOR DISPLAYING THE STUDENT COURSES TAKEN USED BY THE FINANCE CASHIER)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function SelectBySysIDStudentStudentEnrolmentCourse(CommonExchange.SysAccess userInfo, String studentSysId)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_enrolmentcourse		String		'SYSECR*********'
+				sysid_student				String 		'SYSSTD*******'
+				course_id					String		'CRSE**'
+				sysid_schoolfee				String		'SYSSCF***'
+				sysid_semester				String		'SYSSEM****'
+				is_current_course			Boolean
+				course_group_id				String		'CG**'
+				course_title				String	
+				course_acronym				String
+				group_description			String
+				is_semestral				Boolean
+				year_description			String	
+				semester_description		String
+
+TO GET THE STUDENT ENROLMENT COURSE BY STUDENT SYSTEM ID DATE START AND DATE END (USED BY THE OFFICE USERS FOR ENROLMENT)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function SelectBySysIDStudentDateStartEndStudentEnrolmentCourse(CommonExchange.SysAccess userInfo, String studentSysId, 
+            String dateStart, String dateEnd)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_enrolmentcourse		String		'SYSECR*********'
+				sysid_student				String 		'SYSSTD*******'
+				course_id					String		'CRSE**'
+				sysid_schoolfee				String		'SYSSCF***'
+				sysid_semester				String		'SYSSEM****'
+				is_current_course			Boolean
+				course_group_id				String		'CG**'
+				course_title				String
+				course_acronym				String
+				group_description			String
+				is_semestral				Boolean
+				last_semester_enrolled		String		'SYSSEM****'
+
+TO GET THE STUDENT ENROLMENT LEVEL BY STUDENT SYSTEM ID (FOR DISPLAYING THE STUDENT ENTRY LEVELS USED BY THE FINANCE CASHIER)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function SelectBySysIDStudentStudentEnrolmentLevel(CommonExchange.SysAccess userInfo, String studentSysId)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_enrolmentlevel		String 		'SYSELV*********'
+				sysid_enrolmentcourse		String		'SYSECR*********'
+				sysid_feelevel				String 		'SYSFLV******'
+				sysid_semester				String		'SYSSEM****'
+				level_section				String
+				is_entry_level				Boolean		
+				is_graduate_student			Boolean
+				is_international			Boolean
+				enrolment_level_no			Int32
+				is_current_course			Boolean
+				sysid_schoolfee				String		'SYSSCF***'
+				year_level_id				String 		'YRLV**'
+				year_level_description		String
+				year_level_no				Int16
+				course_group_id				String		'CG**'
+				group_description			String
+				is_semestral				Boolean
+				year_description			String
+				year_id						String		'SY********'
+				semester_description		String
+
+TO GET THE STUDENT ENROLMENT LEVEL BY STUDENT SYSTEM ID YEAR ID AND SEMESTER SYSTEM ID (USED BY THE OFFICE USERS FOR ENROLMENT AND FINANCE FOR CASHIERING)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function SelectBySysIDStudentYearIDSemesterStudentEnrolmentLevel(CommonExchange.SysAccess userInfo, String studentSysId, 
+            String yearId, String semesterSysId, String enrolmentCourseSysId, Boolean includeNotEnrolled, Boolean includeMarkedDeleted)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_enrolmentlevel		String 		'SYSELV*********'
+				sysid_enrolmentcourse		String		'SYSECR*********'
+				sysid_feelevel				String 		'SYSFLV******'
+				sysid_semester				String		'SYSSEM****'
+				level_section				String
+				is_entry_level				Boolean
+				is_marked_deleted			Boolean
+				is_graduate_student			Boolean
+				is_international			Boolean
+				enrolment_level_no			Int32
+				course_id					String		'CRSE**'
+				sysid_schoolfee				String		'SYSSCF***'
+				year_level_id				String 		'YRLV**'				
+				year_level_description		String
+				year_level_no				Int16
+				is_graduate_level			Boolean
+				course_group_id				String		'CG**'
+				group_description			String
+				is_semestral				Boolean
+				is_enrolled					Boolean
+
+TO DETERMINE IF THE STUDENT WITH A CERTAIN COURSE ALREADY EXISTS (FOR CREATION OF THE STUDENT COURSE BY THE FINANCE CASHIER)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function IsExistsStudentCourseStudentEnrolmentCourse(CommonExchange.SysAccess userInfo, String studentSysId, String courseId)
+
+	this will return a BOOLEAN value
+
+TO DETERMINE IF THE STUDENT YEAR LEVEL FOR A CERTAIN COURSE MUST BE EQUAL OR GREATER IN DEGREE
+	(FOR CREATION OF THE STUDENT ENTRY LEVEL BY THE FINANCE CASHIER AND STUDENT ENROLMENT BY OFFICE USERS)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function IsCourseYearLevelNoLesserStudentEnrolmentLevel(CommonExchange.SysAccess userInfo, String studentSysId,
+            String courseId, String yearLevelId)
+
+	this will return a BOOLEAN value
+
+TO DETERMINE IF THE STUDENT YEAR LEVEL HAS ALREADY AN ENTRY LEVEL PER COURSE GROUP
+	(FOR CREATION OF THE STUDENT ENROLMENT LEVEL BY OFFICE USERS)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function IsLevelCourseGroupWithEntryLevelEnrolmentLevel(CommonExchange.SysAccess userInfo, String studentSysId, String feeLevelSysId)
+
+	this will return a BOOLEAN value
+
+TO DETERMINE IF THE YEAR LEVEL PER STUDENT PER COURSE PER SEMESTER ALREADY EXISTS OR THERE IS ALREADY A LEVEL FOR THE CURRENT COURSE BASED ON YEAR
+	(FOR CREATION OF THE STUDENT ENTRY LEVEL BY THE FINANCE CASHIER AND STUDENT ENROLMENT BY OFFICE USERS)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the function IsExistSysIDStudentCourseLevelSemesterEnrolmentLevel(CommonExchange.SysAccess userInfo, String studentSysId, String enrolmentCourseSysId,
+            String feeLevelSysId, String semesterSysId)
+
+	this will return a BOOLEAN value
+
+TO INSERT A NEW STUDENT ENROLMENT COURSE (FOR CREATION OF THE STUDENT ENROLMENT COURSE BY THE FINANCE CASHIER)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the procedue InsertStudentEnrolmentCourse(CommonExchange.SysAccess userInfo, ref CommonExchange.StudentEnrolmentCourse enrolmentCourseInfo)
+
+	this will need the following CommonExchange.StudentEnrolmentCourse struct value:
+
+				enrolmentCourseInfo.EnrolmentCourseSysId
+                enrolmentCourseInfo.StudentSysId
+                enrolmentCourseInfo.CourseId
+                enrolmentCourseInfo.FeeInformationSysId
+                enrolmentCourseInfo.SemesterSysId
+
+TO UPDATE A STUDENT ENROLMENT COURSE (FOR UPDATE OF THE STUDENT ENROLMENT COURSE BY THE FINANCE CASHIER)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the procedue UpdateStudentEnrolmentCourse(CommonExchange.SysAccess userInfo, CommonExchange.StudentEnrolmentCourse enrolmentCourseInfo)
+
+	this will need the following CommonExchange.StudentEnrolmentCourse struct value:
+
+				enrolmentCourseInfo.EnrolmentCourseSysId
+                enrolmentCourseInfo.StudentSysId
+                enrolmentCourseInfo.IsCurrentCourse
+
+TO INSERT A NEW STUDENT ENROLMENT LEVEL (FOR CREATION OF THE STUDENT ENROLMENT LEVEL BY THE FINANCE CASHIER OR OFFICE USER)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the procedue InsertStudentEnrolmentLevel(CommonExchange.SysAccess userInfo, ref CommonExchange.StudentEnrolmentLevel enrolmentLevelInfo)
+
+	this will need the following CommonExchange.StudentEnrolmentLevel struct value:
+
+				enrolmentLevelInfo.EnrolmentLevelSysId
+                enrolmentLevelInfo.EnrolmentCourseSysId
+                enrolmentLevelInfo.FeeLevelSysId
+                enrolmentLevelInfo.SemesterSysId
+				enrolmentLevelInfo.LevelSection
+                enrolmentLevelInfo.IsEntryLevel
+				enrolmentLevelInfo.IsGraduateStudent
+
+TO UPDATE A STUDENT ENROLMENT LEVEL (FOR UPDATE OF THE STUDENT ENROLMENT LEVEL BY THE FINANCE CASHIER OR OFFICE USER IN THE SUBJECT LOADING MODULE)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the procedue UpdateStudentEnrolmentLevel(CommonExchange.SysAccess userInfo, CommonExchange.StudentEnrolmentLevel enrolmentLevelInfo)
+
+	this will need the following CommonExchange.StudentEnrolmentLevel struct value:
+
+				enrolmentLevelInfo.EnrolmentLevelSysId
+				enrolmentLevelInfo.LevelSection
+				enrolmentLevelInfo.IsGraduateStudent
+				enrolmentLevelInfo.IsInternational
+
+TO DELETE A STUDENT ENROLMENT LEVEL (FOR DELETION OF THE STUDENT ENROLMENT LEVEL BY THE FINANCE CASHIER OR OFFICE USER)
+
+	==> instantiate from RemCntStudentEnrolmentManager
+	call the procedue DeleteStudentEnrolmentLevel(CommonExchange.SysAccess userInfo, CommonExchange.StudentEnrolmentLevel enrolmentLevelInfo)
+
+	this will need the following CommonExchange.StudentEnrolmentLevel struct value:
+
+				enrolmentLevelInfo.EnrolmentLevelSysId
+
+BUSINESS RULES
+
+1. Only the FINANCE USER can insert or update a student enrolment course.
+2. There must be only one instance of a certain course for a certain student. 
+3. There must be only one course that is the current course and there must be at least one current course of the student.
+4. Only the current course can be inserted with a new course level.
+5. If the user is an OFFICE USER, only the courses that belongs to his/her department can be inserted with a new level.
+6. If the user is an OFFICE USER, the new level to be inserted/created must have an entry level with regards to its 
+		course group per student.
+7. There must be only one level per student per school year per course and per semester (if the course is semestral).
+8. On student enrolment, only the year level that has already a school fee level will be available for selection.
+9. If the student is marked as an international student, it will be carried on the student enrolment level.  
+10. Only the FINANCE USER can mark or unmark the student's enrolment level as international student.
+11. Only the OFFICE USER can mark or unmark the student as graduating.
+12. If a level for a certain course is already marked as graduating student, there will be no more level displayed when the query is of the succeeding year 
+	of that certain course because the student already has graduated.
+
+TODO AFTER MIGRATION
+
+1. Update stored procedure InsertStudentEnrolmentCourse
+2. Update stored procedure InsertStudentEnrolmentLevel
+3. Update stored procedure UpdateStudentEnrolmentLevel
+4. Update stored procedure DeleteStudentEnrolmentLevel

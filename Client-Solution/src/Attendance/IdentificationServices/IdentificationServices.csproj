@@ -1,0 +1,146 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{567E31B0-B1F6-4368-9CAA-351B2722B5D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IdentificationServices</RootNamespace>
+    <AssemblyName>idsvc</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="rclnt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Server Solutions\Server DLL\rclnt.dll</HintPath>
+    </Reference>
+    <Reference Include="rslib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Server Solutions\Server DLL\rslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassIdentificationManager\BaseClass\IdentificationLogic.cs" />
+    <Compile Include="ClassIdentificationManager\BaseForm\IdentificationManager.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\BaseForm\Identification.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\BaseForm\Identification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\BaseForm\Identification.Designer.cs">
+      <DependentUpon>Identification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\BaseForm\SearchList.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\BaseForm\SearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\BaseForm\SearchList.Designer.cs">
+      <DependentUpon>SearchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\DerivedForm\IdentificationEmployeeUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\DerivedForm\IdentificationEmployeeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\DerivedForm\IdentificationStudentUpdate.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\DerivedForm\IdentificationStudentUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\BaseForm\IdentificationManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassIdentificationManager\BaseForm\IdentificationManager.Designer.cs">
+      <DependentUpon>IdentificationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassIdentificationManager\BaseForm\IdentificationManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IdentificationManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassIdentificationManager\BaseForm\Identification.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Identification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassIdentificationManager\BaseForm\SearchList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassIdentificationManager\DerivedForm\IdentificationEmployeeUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IdentificationEmployeeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassIdentificationManager\DerivedForm\IdentificationStudentUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IdentificationStudentUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

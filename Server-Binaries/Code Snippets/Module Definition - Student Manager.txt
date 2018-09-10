@@ -1,0 +1,199 @@
+CACHED DATA
+
+	==> instantiate from RemCntStudentManager
+	call the function GetDataSetForStudentInformation(CommonExchange.SysAccess userinfo, String serverDateTime)
+
+	this will return a DATASET which contains the following table:
+
+	Table Name: SchoolYearTable
+
+				year_id 					String 		'SY********'
+            	year_description			String
+            	date_start					String
+            	date_end					String
+				is_summer					Boolean
+
+	Table Name: CourseInformationTable
+
+				course_id 					String		'CRSE**'
+            	course_group_id				String		'CG**'
+            	department_id				String		'DEPT***'
+            	course_title				String
+				course_acronym				String
+				group_no					Byte
+				is_semestral				Boolean
+				is_per_unit					Boolean
+				department_name				String
+				department_acronym			String
+				id_prefix					String
+
+	Table Name: CourseYearLevelTable
+
+				course_year_level_id		String 		'CYLI***'
+				course_id 					String		'CRSE**'
+				year_level_id				String		'YRLV**'
+				is_graduate_level			Boolean
+				course_title				String
+				course_acronym				String
+				year_level_description		String
+				level_acronym				String
+				id_prefix					String
+				group_no					Byte		'1, 2, 3, 4, 5...'
+				group_description			String
+				is_per_unit					Boolean
+
+	Table Name: SchoolFeeInformationTable
+
+				sysid_schoolfee				String		'SYSSCF***'
+            	year_id 					String		'SY********'
+            	year_description			String
+            	date_start					String
+            	date_end					String
+				is_summer					Boolean
+
+	Table Name: SemesterInformationTable
+
+				sysid_semester				String		'SYSSEM****'
+            	year_id 					String		'SY********'
+            	semester_id					Byte
+            	date_start					String
+            	date_end					String
+				year_description			String
+				is_summer					Boolean
+				semester_description		String
+
+	Table Name: YearLevelInformationTable
+
+				year_level_id				String		'YRLV**'
+				year_level_description		String
+				acronym						String
+				id_prefix					String
+				year_level_no				Int16
+				course_group_id				String		'CG**'
+				group_no					Byte		'1, 2, 3, 4, 5...'
+				group_description			String
+				is_semestral				Boolean
+				is_per_unit					Boolean
+
+	Table Name: CourseGroupTable
+
+				course_group_id				String		'CG**'
+				group_no					Byte		'1, 2, 3, 4, 5...'
+				group_description			String
+				is_semestral				Boolean
+				is_per_unit					Boolean
+
+
+TO GET THE SCHOOL FEE LEVELS BY SYSID_SCHOOLFEE (FOR LIST OF THE SCHOOL FEE LEVELS)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the function SelectBySysIDSchoolFeeSchoolFeeLevel(CommonExchange.SysAccess userInfo, String schoolFeeSysId)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_feelevel				String 		'SYSFLV******'
+				sysid_schoolfee				String		'SYSSCF***'
+				year_level_id				String		'YRLV**'
+				year_id 					String		'SY********'
+				year_description			String			
+				course_group_id				String		'CG**'
+				year_level_description		String
+				acronym						String
+				year_level_no				Int16
+				group_no					Byte		'1, 2, 3, 4, 5...'		
+				group_description			String
+				is_semestral				Boolean
+				is_per_unit					Boolean
+
+TO GET THE TOTAL NUMBER OF STUDENTS CREATED BASED ON A DATE START (FOR STUDENT ID GENERATION)
+
+	==> instantiate from RemCntStudentManager
+	call the function GetCountForStudentIDStudentInformation(CommonExchange.SysAccess userInfo, String schoolFeeSysId, String yearLevelId)
+
+	this will return an INTEGER value
+
+TO QUERY A STUDENT INFORMATION BY QUERY STRING, DATE START, DATE END, COURSE ID LIST, YEAR LEVEL ID LIST
+
+	==> instantiate from RemCntStudentManager
+	call the function SelectStudentInformation(CommonExchange.SysAccess userInfo, String queryString, String dateStart, String dateEnd, 
+            String courseIdList, String yearLevelIdList)
+
+	Parameter requirements:
+
+		If the query needs only the student id, card number, last name, first name, level section regardless of enrolment year
+		or semester, course, or year level:
+
+		queryString - the string criteria that is to be searched (input * for all student)
+		dateStart - String.Empty
+		dateEnd - String.Empty
+		courseIdList - String.Empty
+		yearLevelIdList - String.Empty
+		
+		If the query needs the student id, card number, last name, first name, level section with enrolment year or semester,
+		regardless of course or year level:
+
+		queryString - the string criteria that is to be searched (input * for all student)
+		dateStart - Date start of the year or the semester
+		dateEnd - Date start of the year or the semester
+		courseIdList - String.Empty
+		yearLevelIdList - String.Empty
+
+		If the query needs the student id, card number, last name, first name, level section with enrolment year or semester,
+		course, regardless of year level:
+
+		queryString - the string criteria that is to be searched (input * for all student)
+		dateStart - Date start of the year or the semester
+		dateEnd - Date start of the year or the semester
+		courseIdList - 'CRSE01', 'CRSE10', 'CRSE02'
+		yearLevelIdList - String.Empty
+
+		If the query needs the student id, card number, last name, first name, level section with enrolment year or semester,
+		course, and year level:
+
+		queryString - the string criteria that is to be searched (input * for all student)
+		dateStart - Date start of the year or the semester
+		dateEnd - Date start of the year or the semester
+		courseIdList - 'CRSE01', 'CRSE10', 'CRSE02'
+		yearLevelIdList - 'YRLV01', 'YRLV05', 'YRLV07', 'YRLV10'
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_student				String		'SYSSTD*******'
+				student_id					String
+				card_number					String
+				last_name					String
+				first_name					String
+				middle_name					String
+				is_international			Boolean
+				present_address				String
+				present_phone_nos			String
+				home_address				String
+				home_phone_nos				String
+				father_name					String
+				father_address				String
+				father_phone_nos			String
+				father_life_status_string	String
+				mother_name					String
+				mother_address				String
+				mother_phone_nos			String
+				mother_life_status_string	String
+				guardian_name				String
+				guardian_address			String
+				guardian_phone_nos			String
+				course_id					String		'CRSE**'
+				sysid_enrolmentlevel		String		'SYSELV*********'
+				sysid_feelevel				String		'SYSFLV******'
+				sysid_semester				String		'SYSSEM****'
+				is_graduate_student			Boolean
+				level_section				String
+				year_level_description		String
+				year_level_acronym			String
+				department_id				String 		'DEPT***'
+				course_title				String
+				course_acronym				String
+				department_name				String
+				department_acronym			String
+				group_description			String				
+				year_description			String
+				semester_description		String
+

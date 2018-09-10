@@ -1,0 +1,11 @@
+
+ FOR THE PRINT OUTS
+
+ 1.) Add Paper Size
+	a. Go to Printer and Faxes
+	b. Select the Printer you whant to add a paper size (very important) 
+		Note: The Paper size (Height OR Width) should be unique on that printer 
+	c. Go to File >> Server properties
+	d. Create a new form
+		-->> form name and size for the SPUD receipt:: SPUD_Receipt_Format (With: 80.50in, Height: 3.77in)
+		-->> form name and size for the SPUD Teacher Load:: SPUD_Teacher_Format( With: 80.50in, Height: 5.50in)

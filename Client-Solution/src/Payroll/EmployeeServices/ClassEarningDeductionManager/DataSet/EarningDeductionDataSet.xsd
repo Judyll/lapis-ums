@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EarningDeductionDataSet" targetNamespace="http://tempuri.org/EarningDeductionDataSet.xsd" xmlns:mstns="http://tempuri.org/EarningDeductionDataSet.xsd" xmlns="http://tempuri.org/EarningDeductionDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EarningDeductionDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="EarningDeductionDataSet" msprop:Generator_DataSetName="EarningDeductionDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="earning_deduction" msprop:Generator_UserTableName="earning_deduction" msprop:Generator_RowDeletedName="earning_deductionRowDeleted" msprop:Generator_RowChangedName="earning_deductionRowChanged" msprop:Generator_RowClassName="earning_deductionRow" msprop:Generator_RowChangingName="earning_deductionRowChanging" msprop:Generator_RowEvArgName="earning_deductionRowChangeEvent" msprop:Generator_RowEvHandlerName="earning_deductionRowChangeEventHandler" msprop:Generator_TableClassName="earning_deductionDataTable" msprop:Generator_TableVarName="tableearning_deduction" msprop:Generator_RowDeletingName="earning_deductionRowDeleting" msprop:Generator_TablePropName="earning_deduction">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:long" />
+              <xs:element name="date_string" msprop:Generator_UserColumnName="date_string" msprop:Generator_ColumnPropNameInRow="date_string" msprop:Generator_ColumnVarNameInTable="columndate_string" msprop:Generator_ColumnPropNameInTable="date_stringColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_UserColumnName="description" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInTable="descriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_UserColumnName="amount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInTable="amountColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:earning_deduction" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

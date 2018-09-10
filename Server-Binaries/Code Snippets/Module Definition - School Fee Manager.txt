@@ -1,0 +1,326 @@
+CACHED DATA
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the function GetDataSetForSchoolFee(CommonExchange.SysAccess userinfo, String serverDateTime)
+
+	this will return a DATASET which contains the following table:
+
+	Table Name: SchoolYearTable
+
+				year_id 						String	'SY********'
+            	year_description				String
+            	date_start						String
+            	date_end						String
+				is_summer						Boolean
+	
+	Table Name: SchoolFeeCategoryTable
+
+				fee_category_id					String	'FCID**'
+            	category_description			String
+            	category_no						Byte	'1, 2, 3, 4, 5....'
+
+	Table Name: SchoolFeeParticularTable
+
+				sysid_feeparticular				String	'SYSFPR***'
+            	fee_category_id					String	'FCID**'
+				particular_description			String
+				is_optional						Boolean
+				is_office_access				Boolean
+				is_entry_level_included			Boolean
+				is_graduation_fee				Boolean
+				category_description			String
+            	category_no						Byte	'1, 2, 3, 4, 5....'
+
+	Table Name: SchoolFeeInformationTable
+
+				sysid_schoolfee					String	'SYSSCF***'
+            	year_id 						String	'SY********'
+            	year_description				String
+            	date_start						String
+            	date_end						String
+				is_summer						Boolean
+
+	Table Name: CourseGroupTable
+
+				course_group_id					String	'CG**'
+				group_no						Byte	'1, 2, 3, 4, 5...'
+				group_description				String
+				is_semestral					Boolean
+				is_per_unit						Boolean
+
+	Table Name: YearLevelInformationTable
+
+				year_level_id					String	'YRLV**'
+				year_level_description			String
+				acronym							String
+				id_prefix						String
+				year_level_no					Int16
+				course_group_id					String	'CG**'
+				group_no						Byte	'1, 2, 3, 4, 5...'
+				group_description				String
+				is_semestral					Boolean
+				is_per_unit						Boolean
+
+TO GET THE SCHOOL FEE DETAILS BY DATE START END (FOR DISPLAYING OF THE SCHOOL FEE DETAILS)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the function SelectByDateStartEndSchoolFeeDetails(CommonExchange.SysAccess userInfo, String dateStart, String dateEnd)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_feedetails				String	'SYSFDL*********'
+				sysid_feelevel					String 	'SYSFLV******'
+				sysid_feeparticular				String	'SYSFPR***'
+				is_level_increase				Boolean			
+				amount							Decimal
+				sysid_schoolfee					String	'SYSSCF***'
+				year_level_id					String	'YRLV**'
+				year_id							String	'SY********'
+				course_group_id					String	'CG**'
+				year_level_description			String
+				group_description				String
+				fee_category_id					String	'FCID**'
+				particular_description			String
+				is_optional						Boolean
+				is_office_access				Boolean
+				is_entry_level_included			Boolean
+				is_graduation_fee				Boolean
+				category_description			String
+
+TO GET THE SCHOOL FEE LEVELS BY SYSID_SCHOOLFEE (FOR LIST OF THE SCHOOL FEE LEVELS)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the function SelectBySysIDSchoolFeeSchoolFeeLevel(CommonExchange.SysAccess userInfo, String schoolFeeSysId)
+
+	this will return a DATATABLE which contains the following field:
+
+				sysid_feelevel					String 	'SYSFLV******'
+				sysid_schoolfee					String	'SYSSCF***'
+				year_level_id					String	'YRLV**'
+				year_id 						String	'SY********'
+				year_description				String			
+				course_group_id					String	'CG**'
+				year_level_description			String
+				acronym							String
+				year_level_no					Int16
+				group_no						Byte	'1, 2, 3, 4, 5...'		
+				group_description				String
+				is_semestral					Boolean
+				is_per_unit						Boolean
+
+TO DETERMINE IF THE SCHOOL YEAR HAS ALREADY A SCHOOL FEE INFORMATION (FOR CREATION OF THE SCHOOL FEE INFORMATION)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the function IsExistsYearIDSchoolFeeInformation(CommonExchange.SysAccess userInfo, CommonExchange.SchoolFeeInformation feeInfo)
+
+	this will need the following CommonExchange.SchoolFeeInformation struct value:
+
+				feeInfo.YearId
+
+	this will return a BOOLEAN value
+
+TO DETERMINE IF THE SCHOOL FEE PARTICULAR DESCRIPTION ALREADY EXISTS (FOR CREATION OF THE SCHOOL FEE PARTICULAR)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the function IsExistsParticularDescriptionSchoolFeeParticular(CommonExchange.SysAccess userInfo, String particularSysId, String particularDescription)
+
+	this will return a BOOLEAN value
+
+TO DETERMINE IF THE SCHOOL FEE YEAR ID AND YEARL LEVEL ID ALREADY EXISTS (FOR CREATION OF THE SCHOOL FEE LEVEL)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the function IsExistsSchoolFeeYearLevel(CommonExchange.SysAccess userInfo, CommonExchange.SchoolFeeLevel levelInfo)
+
+	this will need the following CommonExchange.SchoolFeeLevel struct value:
+
+				levelInfo.FeeInformationSysId
+				levelInfo.YearLevelId
+
+	this will return a BOOLEAN value
+
+TO DETERMINE IF THE SCHOOL FEE YEAR LEVEL SYSTEM ID AND SCHOOL FEE PARTICULAR SYSTEM ID ALREADY EXISTS (FOR CREATION OF THE SCHOOL FEE DETAILS)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the function IsExistsLevelParticularSchoolFeeDetails(CommonExchange.SysAccess userInfo, String feeLevelSysId, String particularSysId)
+
+	this will return a BOOLEAN value
+
+
+TO INSERT A NEW SCHOOL FEE INFORMATION (FOR CREATION OF THE SCHOOL FEE INFORMATION)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue InsertSchoolFeeInformation(CommonExchange.SysAccess userInfo, ref CommonExchange.SchoolFeeInformation feeInfo)
+
+	this will need the following CommonExchange.SchoolFeeInformation struct value:
+
+				feeInfo.FeeInformationSysId
+               	feeInfo.YearId
+
+TO INSERT A NEW SCHOOL FEE LEVEL(FOR CREATION OF THE SCHOOL FEE LEVEL)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue InsertSchoolFeeLevel(CommonExchange.SysAccess userInfo, ref CommonExchange.SchoolFeeLevel levelInfo)
+
+	this will need the following CommonExchange.SchoolFeeLevel struct value:
+
+				levelInfo.FeeLevelSysId
+				levelInfo.FeeInformationSysId
+				levelInfo.YearLevelId
+
+TO INSERT A NEW SCHOOL FEE PARTICULAR (FOR CREATION OF THE SCHOOL FEE PARTICULAR)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue InsertSchoolFeeParticular(CommonExchange.SysAccess userInfo, ref CommonExchange.SchoolFeeParticular particularInfo)
+
+	this will need the following CommonExchange.SchoolFeeParticular struct value:
+
+				particularInfo.FeeParticularSysId
+				particularInfo.FeeCategoryId
+				particularInfo.ParticularDescription
+				particularInfo.IsOptional
+				particularInfo.IsOfficeAccess
+				particularInfo.IsEntryLevelIncluded
+				particularInfo.IsGraduationFee
+
+TO UPDATE A SCHOOL FEE PARTICULAR (FOR SCHOOL FEE PARTICULAR UPDATE)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue UpdateSchoolFeeParticular(CommonExchange.SysAccess userInfo, CommonExchange.SchoolFeeParticular particularInfo)
+
+	this will need the following CommonExchange.SchoolFeeParticular struct value:
+
+				particularInfo.FeeParticularSysId
+				particularInfo.ParticularDescription
+				particularInfo.IsOfficeAccess
+
+TO INSERT A NEW SCHOOL FEE DETAILS (FOR CREATION OF THE SCHOOL FEE DETAILS)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue InsertSchoolFeeDetails(CommonExchange.SysAccess userInfo, ref CommonExchange.SchoolFeeDetails detailsInfo)
+
+	this will need the following CommonExchange.SchoolFeeDetails struct value:
+
+				detailsInfo.FeeDetailsSysId
+				detailsInfo.FeeLevelSysId
+				detailsInfo.FeeParticularSysId
+				detailsInfo.IsLevelIncrease
+				detailsInfo.Amount
+
+TO UPDATE A SCHOOL FEE DETAILS (FOR SCHOOL FEE DETAILS UPDATE)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue UpdateSchoolFeeDetails(CommonExchange.SysAccess userInfo, CommonExchange.SchoolFeeDetails detailsInfo)
+
+	this will need the following CommonExchange.SchoolFeeDetails struct value:
+
+				detailsInfo.FeeDetailsSysId
+				detailsInfo.FeeLevelSysId
+				detailsInfo.FeeParticularSysId
+				detailsInfo.IsLevelIncrease
+				detailsInfo.Amount
+
+TO DELETE A SCHOOL FEE DETAILS (FOR SCHOOL FEE DETAILS DELETE)
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue DeleteSchoolFeeDetails(CommonExchange.SysAccess userInfo, CommonExchange.SchoolFeeDetails detailsInfo)
+
+	this will need the following CommonExchange.SchoolFeeDetails struct value:
+
+				detailsInfo.FeeDetailsSysId
+
+TO INSERT A STUDENT ADDITIONAL SCHOOL FEE
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue InsertStudentAdditionalFee(CommonExchange.SysAccess userInfo, CommonExchange.StudentAdditionalFee additionalFee)
+
+	this will need the following CommonExchange.StudentAdditionalFee struct value:
+	
+				additionalFee.EnrolmentLevelSysId
+                additionalFee.FeeParticularSysId
+                additionalFee.Amount
+                
+TO UPDATE A STUDENT ADDITIONAL SCHOOL FEE
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue UpdateStudentAdditionalFee(CommonExchange.SysAccess userInfo, CommonExchange.StudentAdditionalFee additionalFee)
+
+	this will need the following CommonExchange.StudentAdditionalFee struct value:
+	
+				additionalFee.AdditionalFeeId
+                additionalFee.FeeParticularSysId
+                additionalFee.Amount
+                
+TO DELETE A STUDENT ADDITIONAL SCHOOL FEE
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue DeleteStudentAdditionalFee(CommonExchange.SysAccess userInfo, CommonExchange.StudentAdditionalFee additionalFee)
+
+	this will need the following CommonExchange.StudentAdditionalFee struct value:
+	
+				additionalFee.AdditionalFeeId
+				
+TO INSERT OR DELETE A STUDENT OPTIONAL SCHOOL FEE
+
+	==> instantiate from RemCntSchoolFeeManager
+	call the procedue InsertDeleteStudentOptionalFee(CommonExchange.SysAccess userInfo, DataTable optionalFeeTable)
+
+	the TABLE: "optionalFeeTable" must contain the following fields
+
+				optional_fee_id					Int64
+				sysid_enrolmentlevel			String
+				sysid_feedetails				String
+
+BUSINESS RULES:
+
+1. For School Fees, only the Administrator, Cashier and VP of Finance has authorization to access it
+2. For School Fees Information, a certain school year must have only one school fee information.
+3. FEE COMPUTATION:
+
+	--> FOR TUITION FEE: 
+
+		From the entry level of the student, the tuition fee will be carried until the student graduate
+		from the certain course group.  If the tuition fee is marked as all level increase for a certain year, 
+		the increase based on the current student's year level will be then used as the student's 
+		tuition fee until he/she graduates.
+
+		If the subject loaded is fixed amount and the computation for that certain level is semestral, 
+		the number of units/hours for that certain subject will not be computed based on the tuition fee. The fixed
+		amount is automatically added on the tuition fee.
+
+	--> FOR MISCELLANEOUS FEES:
+
+		From the entry level of the student, a particular miscellaneous fee will be carried until the student graduate
+		from the certain course group.  If the particular miscellaneous fee is marked as level increase for a 
+		certain year, the increase based on the current student's year level will be then used as the student's 
+		miscellanous fee until he/she graduates.
+		
+		To get the summary for the miscellaneous fees, each year level of the student he/she enrolled must be compared
+		to his/her entry level to determine if the there is an inserted or deleted miscellaneous
+		fee with regards to his/her entry level and course group.		
+
+
+	--> FOR OTHER FEES:
+
+		If the year level is an entry level, other fees that is not optional will be included.  If it is an optional
+		fee and it is also marked as included in the entry level, it will be then included in the computation.
+
+		If the other fee is not optional and it is not in the entry level, this will be automatically computed 
+		with regards to the student year level.
+
+		If the year level is a graduating level, it must have a graduation fee so that it will appear in each student
+		that is marked as graduating.  The summer term must have a graduation fee so that the fee will appear if the
+		student is marked graduating in the said term.
+
+		If the year level of the certain course is a graduating level and the student is marked as graduating, 
+		the graduation fee will be included automatically. If not, then the graduation fee is excluded.
+
+	--> FOR LABORATORY FEES:
+
+		This is automatically an optional fee and has office access granted.  From the entry level of the student,
+		the laboratory fee will be carried until the student graduate.  If the laboratory fee is marked as 
+		level increase for a certain year, the increase based on the current student's year level will be then 
+		used as the student's laboratory fee until he/she graduates.
+
+
+4. For School Fee Particular, "Is Optional" feature can't be updated.
+5. School Fee Particular that is used for additional fee must be on the OTHER FEES OR MISCELLANEOUS FEES category and must not be an optional fee.
