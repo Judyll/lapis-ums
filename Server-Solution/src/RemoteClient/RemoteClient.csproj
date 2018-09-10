@@ -1,0 +1,386 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA7D7C1A-37E4-41D6-AF8C-ACCECE938B9A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RemoteClient</RootNamespace>
+    <AssemblyName>rclnt</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="rslib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\RemoteClientLib\RemoteClientLib\bin\Release\rslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassEmployeeServices\RemCntDeductionManager.cs" />
+    <Compile Include="ClassEmployeeServices\RemCntEarningManager.cs" />
+    <Compile Include="ClassEmployeeServices\RemCntEmployeeManager.cs" />
+    <Compile Include="ClassEmployeeServices\RemCntLoanManager.cs" />
+    <Compile Include="ClassBaseServices\ProcStatic.Employee.cs" />
+    <Compile Include="ClassBaseServices\ProcStatic.General.cs" />
+    <Compile Include="ClassBaseServices\RemCntBaseManager.cs" />
+    <Compile Include="ClassRegistrarServices\RemCntCourseManager.cs" />
+    <Compile Include="ClassRegistrarServices\RemCntSchoolYearSemesterManager.cs" />
+    <Compile Include="ClassTcp\TcpRemoteServer.cs" />
+    <Compile Include="ControlAnimatedPanel\AnimatedPanel.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAnimatedPanel\AnimatedPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAnimatedPanel\AnimatedPanel.Designer.cs">
+      <DependentUpon>AnimatedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlCourseManager\ControlCourseManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlCourseManager\ControlCourseManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlEarningDeductionManager\ControlEarningDeductionManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlEarningDeductionManager\ControlEarningDeductionManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlEmployeeManager\ControlEmployeeManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlEmployeeManager\ControlEmployeeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlHourMinute\HourMinute.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlHourMinute\HourMinute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlHourMinute\HourMinute.Designer.cs">
+      <DependentUpon>HourMinute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLoanRemittance\ControlLoanRemittance.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlLoanRemittance\ControlLoanRemittance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlManager\ControlManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlManager\ControlManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSchoolYearSemeter\ControlSchoolYearSemesterManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSchoolYearSemeter\ControlSchoolYearSemesterManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlTimeInput\TimeInput.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlTimeInput\TimeInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlTimeInput\TimeInput.designer.cs">
+      <DependentUpon>TimeInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDatePicker\DatePicker.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDatePicker\DatePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDatePicker\DatePicker.Designer.cs">
+      <DependentUpon>DatePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDateRangePicker\DateRangePicker.Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDateRangePicker\DateRangePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDateRangePicker\DateRangePicker.Designer.cs">
+      <DependentUpon>DateRangePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportViewer\CrystalReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportViewer\CrystalReportViewer.Designer.cs">
+      <DependentUpon>CrystalReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlAdditionalFeeManager\ControlAdditionalFeeManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlAdditionalFeeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAnimatedPanel\AnimatedPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AnimatedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAuxiliaryManager\ControlAuxiliaryManager.resx">
+      <DependentUpon>ControlAuxiliaryManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlCashieringManager\ControlCashieringManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlCashieringManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlCourseManager\ControlCourseManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlCourseManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlEarningDeductionManager\ControlEarningDeductionManager.resx">
+      <DependentUpon>ControlEarningDeductionManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlEmployeeManager\ControlEmployeeManager.resx">
+      <DependentUpon>ControlEmployeeManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlHourMinute\HourMinute.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HourMinute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLoanRemittance\ControlLoanRemittance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlLoanRemittance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlMajorExamScheduleManager\ControlMajorExamScheduleManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlMajorExamScheduleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlManager\ControlManager.resx">
+      <DependentUpon>ControlManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlScholarshipManager\ControlScholarshipManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlScholarshipManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSchoolYearSemeter\ControlSchoolYearSemesterManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlSchoolYearSemesterManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSpecialClassManager\ControlSpecialClassManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlSpecialClassManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlStudentManager\ControlStudentManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlStudentManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSubjectSchedulingManager\ControlSubjectSchedulingManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlSubjectSchedulingManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlTimeFrame\ControlTimeFrame.resx">
+      <DependentUpon>ControlTimeFrame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlTimeInput\TimeInput.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TimeInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDatePicker\DatePicker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DatePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDateRangePicker\DateRangePicker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DateRangePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportViewer\CrystalReportViewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CrystalReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassAdministratorServices\RemCntAdministratorManager.cs" />
+    <Compile Include="ClassAttendanceServices\RemCntCampusAccessManager.cs" />
+    <Compile Include="ClassAttendanceServices\RemCntIdMakerManager.cs" />
+    <Compile Include="ClassFinanceServices\RemCntAccountingManager.cs" />
+    <Compile Include="ClassFinanceServices\RemCntCashieringManager.cs" />
+    <Compile Include="ClassFinanceServices\RemCntSchoolFeeManager.cs" />
+    <Compile Include="ClassFinanceServices\RemCntStudentEnrolmentManager.cs" />
+    <Compile Include="ClassFinanceServices\RemCntStudentManager.cs" />
+    <Compile Include="ClassOfficeServices\RemCntAuxiliaryServicesManager.cs" />
+    <Compile Include="ClassOfficeServices\RemCntScholarshipManager.cs" />
+    <Compile Include="ClassOfficeServices\RemCntStudentLoadingManager.cs" />
+    <Compile Include="ClassOfficeServices\RemCntSubjectSchedulingManager.cs" />
+    <Compile Include="ClassOfficeServices\RemCntTeacherLoadingManager.cs" />
+    <Compile Include="ClassRegistrarServices\RemCntMajorExamScheduleManager.cs" />
+    <Compile Include="ClassRegistrarServices\RemCntSpecialClassManager.cs" />
+    <Compile Include="ClassRegistrarServices\RemCntTranscriptManager.cs" />
+    <Compile Include="ClassTcp\AppServer.Configuration.cs" />
+    <Compile Include="ControlAdditionalFeeManager\ControlAdditionalFeeManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAdditionalFeeManager\ControlAdditionalFeeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAuxiliaryManager\ControlAuxiliaryManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAuxiliaryManager\ControlAuxiliaryManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAuxiliaryManager\ControlAuxiliaryManager.Designer.cs">
+      <DependentUpon>ControlAuxiliaryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientExchange\ClientExchange.cs" />
+    <Compile Include="ControlCashieringManager\ControlCashieringManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlCashieringManager\ControlCashieringManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlCustomScrollBar\ControlCustomScrollBar.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlCustomScrollBar\ControlCustomScrollBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlCustomScrollBar\ControlCustomScrollBar.designer.cs">
+      <DependentUpon>ControlCustomScrollBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIdentificationManager\ControlIdentificationManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIdentificationManager\ControlIdentificationManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlMajorExamScheduleManager\ControlMajorExamScheduleManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlMajorExamScheduleManager\ControlMajorExamScheduleManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlScholarshipManager\ControlScholarshipManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlScholarshipManager\ControlScholarshipManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSpecialClassManager\ControlSpecialClassManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSpecialClassManager\ControlSpecialClassManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlStudentManager\ControlStudentManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlStudentManager\ControlStudentManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSubjectSchedulingManager\ControlSubjectSchedulingManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSubjectSchedulingManager\ControlSubjectSchedulingManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlTimeFrame\ControlTimeFrame.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlTimeFrame\ControlTimeFrame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlTimeFrame\ControlTimeFrame.Designer.cs">
+      <DependentUpon>ControlTimeFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTranscriptManager\ControlTranscriptManager.Code.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlTranscriptManager\ControlTranscriptManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <None Include="Resources\back.ico" />
+    <Content Include="Resources\cascade.png" />
+    <None Include="Resources\downarrow.png" />
+    <Content Include="Resources\expand.png" />
+    <None Include="Resources\uparrow.png" />
+    <None Include="Resources\ThumbTop.png" />
+    <None Include="Resources\ThumbSpanTop.png" />
+    <None Include="Resources\ThumbSpanBottom.png" />
+    <None Include="Resources\ThumbMiddle.png" />
+    <None Include="Resources\ThumbBottom.png" />
+    <None Include="Resources\forward.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
